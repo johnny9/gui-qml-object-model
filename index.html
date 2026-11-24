@@ -28,12 +28,12 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 var(--font);-webkit-font-smoothing:antialiased}
 a{color:var(--role-view);text-decoration:none}
 a:hover{text-decoration:underline}
-code{font:13px/1.45 var(--mono);background:var(--surface-alt);border:1px solid var(--border);padding:1px 5px;border-radius:5px}
+code{font:12.8px/1.45 var(--mono);background:var(--surface-alt);border:1px solid var(--border);padding:1px 5px;border-radius:5px}
 pre{margin:0;background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:var(--radius);overflow:auto;font:12.5px/1.55 var(--mono)}
 pre code{background:none;border:none;padding:0;color:inherit;font-size:inherit}
 
 /* Layout */
-.shell{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+.shell{display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh}
 .sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;padding:24px 18px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;gap:20px}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-dot{width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-weight:800;display:grid;place-items:center;font-size:15px;flex:none}
@@ -48,21 +48,21 @@ pre code{background:none;border:none;padding:0;color:inherit;font-size:inherit}
 .theme-btn{cursor:pointer;background:var(--surface-alt);color:var(--text);border:1px solid var(--border-strong);border-radius:7px;padding:7px 10px;font:600 12.5px var(--font);text-align:left}
 .theme-btn:hover{border-color:var(--accent)}
 
-.main{padding:36px clamp(20px,4vw,56px) 80px;max-width:1160px;width:100%}
+.main{padding:36px clamp(20px,4vw,56px) 84px;max-width:1200px;width:100%}
 header.hero{padding-bottom:26px;border-bottom:1px solid var(--border);margin-bottom:34px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-border);padding:3px 10px;border-radius:999px;margin-bottom:12px}
 h1{margin:0 0 10px;font-size:clamp(26px,3.2vw,34px);line-height:1.18;letter-spacing:-.02em}
-.lead{margin:0;max-width:78ch;color:var(--muted);font-size:16px}
-.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:20px}
+.lead{margin:0;max-width:82ch;color:var(--muted);font-size:16px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin-top:20px}
 .pillar{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:13px 15px;box-shadow:var(--shadow)}
 .pillar strong{display:block;font-size:13.5px;margin-bottom:3px}
 .pillar span{font-size:12.5px;color:var(--muted)}
 
-section{margin-top:46px;scroll-margin-top:24px}
+section{margin-top:48px;scroll-margin-top:24px}
 h2{margin:0 0 8px;font-size:22px;letter-spacing:-.015em;display:flex;align-items:center;gap:10px}
 h2 .num{font:700 12px var(--mono);color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-border);padding:2px 7px;border-radius:6px}
 h3{margin:24px 0 8px;font-size:16px}
-.section-desc{margin:0 0 18px;color:var(--muted);max-width:80ch}
+.section-desc{margin:0 0 18px;color:var(--muted);max-width:82ch}
 
 /* Role badges */
 .badge{display:inline-flex;align-items:center;gap:5px;font:600 11.5px var(--font);padding:2px 8px;border-radius:999px;border:1px solid transparent;white-space:nowrap}
@@ -74,11 +74,11 @@ h3{margin:24px 0 8px;font-size:16px}
 .b-op{color:var(--role-op);background:color-mix(in srgb,var(--role-op) 11%,transparent);border-color:color-mix(in srgb,var(--role-op) 28%,transparent)}
 .b-exec{color:var(--role-exec);background:color-mix(in srgb,var(--role-exec) 11%,transparent);border-color:color-mix(in srgb,var(--role-exec) 28%,transparent)}
 .b-core{color:var(--role-core);background:color-mix(in srgb,var(--role-core) 11%,transparent);border-color:color-mix(in srgb,var(--role-core) 28%,transparent)}
-.scope-pill{font:600 11px var(--mono);color:var(--subtle);background:var(--surface-alt);border:1px solid var(--border);padding:1px 7px;border-radius:5px;text-transform:uppercase}
+.scope-pill{font:600 11px var(--mono);color:var(--subtle);background:var(--surface-alt);border:1px solid var(--border);padding:1px 7px;border-radius:5px;text-transform:uppercase;white-space:nowrap}
 
 /* Cards & Grids */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:14px}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
 .rule-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
 .rule-card h4{margin:0 0 6px;font-size:14px}
@@ -92,12 +92,12 @@ td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top}
 tr:last-child td{border-bottom:none}
 tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
 
-/* Nested Ownership Diagram (C4 Container Style) */
+/* Nested Ownership Diagram */
 .own-root{background:var(--surface);border:2px solid var(--border-strong);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
 .own-hdr{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
-.own-title{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px}
+.own-title{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14.5px;flex-wrap:wrap}
 .own-meta{font-size:12px;color:var(--subtle)}
-.own-order{display:flex;align-items:center;justify-content:space-between;font:600 11.5px var(--mono);color:var(--subtle);background:var(--surface-alt);border:1px solid var(--border);border-radius:7px;padding:6px 12px;margin-bottom:14px}
+.own-order{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;font:600 11.5px var(--mono);color:var(--subtle);background:var(--surface-alt);border:1px solid var(--border);border-radius:7px;padding:6px 12px;margin-bottom:14px}
 .own-stack{display:flex;flex-direction:column;gap:12px}
 .own-box{border:1px solid var(--border-strong);border-left:4px solid var(--border-strong);border-radius:9px;padding:13px 15px;background:color-mix(in srgb,var(--surface-alt) 42%,var(--surface))}
 .own-box.core{border-left-color:var(--role-core)}
@@ -105,14 +105,14 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
 .own-box.model{border-left-color:var(--role-model)}
 .own-box.view{border-left-color:var(--role-view)}
 .own-box.ctrl{border-left-color:var(--role-ctrl)}
-.own-subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:10px}
+.own-subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:10px;margin-top:10px}
 .own-leaf{background:var(--surface);border:1px solid var(--border);border-radius:7px;padding:9px 11px;font-size:12.8px}
 .own-leaf strong{display:block;font-size:13px;margin-bottom:2px}
 .own-leaf span{color:var(--muted)}
 
 /* Tabs & Mermaid Panels */
 .tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.tab{cursor:pointer;background:var(--surface);color:var(--muted);border:1px solid var(--border-strong);border-radius:8px;padding:7px 13px;font:600 13px var(--font);transition:all .12s}
+.tab{cursor:pointer;background:var(--surface);color:var(--muted);border:1px solid var(--border-strong);border-radius:8px;padding:7px 12px;font:600 12.8px var(--font);transition:all .12s}
 .tab:hover{color:var(--text);border-color:var(--accent)}
 .tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
 .panel{display:none;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
@@ -120,7 +120,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
 .panel-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .panel-head h3{margin:0;font-size:16px}
 .panel-head p{margin:0;font-size:13px;color:var(--muted)}
-.diagram-box{overflow-x:auto;padding:10px 4px;min-height:140px}
+.diagram-box{overflow-x:auto;padding:10px 4px;min-height:150px}
 .diagram-box svg{max-width:100%;height:auto;display:block;margin:0 auto}
 .panel-notes{margin:14px 0 0;padding:12px 16px;background:var(--surface-alt);border-radius:8px;font-size:13px;color:var(--muted)}
 .panel-notes ul{margin:6px 0 0;padding-left:18px}
@@ -128,7 +128,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
 
 /* Catalog Filter Bar */
 .filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
-.search-input{flex:1 1 260px;padding:8px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface);color:var(--text);font:13.5px var(--font)}
+.search-input{flex:1 1 240px;padding:8px 12px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface);color:var(--text);font:13.5px var(--font)}
 .search-input:focus{outline:2px solid color-mix(in srgb,var(--accent) 40%,transparent);border-color:var(--accent)}
 .select-input{padding:8px 10px;border-radius:8px;border:1px solid var(--border-strong);background:var(--surface);color:var(--text);font:13px var(--font)}
 .count-pill{font:600 12px var(--mono);color:var(--subtle);margin-left:auto}
@@ -158,33 +158,33 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
     <nav class="nav" id="sideNav">
       <div class="nav-group">Model</div>
       <a href="#roles">1. Roles &amp; Rules</a>
-      <a href="#ownership">2. Ownership &amp; Threads</a>
+      <a href="#ownership">2. Ownership &amp; Core Boundary</a>
       <a href="#execution">3. Execution Contract</a>
-      <div class="nav-group">Diagrams</div>
-      <a href="#features">4. Feature Boundaries</a>
+      <div class="nav-group">App Areas (8 Views)</div>
+      <a href="#features">4. Feature Relationships</a>
       <a href="#sequences">5. Concurrency &amp; Shutdown</a>
       <div class="nav-group">Reference</div>
-      <a href="#catalog">6. Class Directory</a>
+      <a href="#catalog">6. Complete Class Directory</a>
     </nav>
 
     <div class="sidebar-foot">
       <button class="theme-btn" id="themeToggle" type="button">Switch to Dark Theme</button>
-      <div>Target architecture reference for <code>bitcoin-core/gui-qml</code>.</div>
+      <div>QML app architecture up to the Bitcoin Core <code>interfaces::*</code> boundary.</div>
     </div>
   </aside>
 
   <main class="main">
     <header class="hero">
-      <div class="eyebrow">Architecture Reference · Ideal Target Model</div>
+      <div class="eyebrow">Architecture Reference · QML Application Side</div>
       <h1>Bitcoin Core App (GUI QML) Object Model</h1>
       <p class="lead">
-        A single-owner object hierarchy for the QML application: <strong>6 roles + Core</strong> separated cleanly from lifetime scope, one feature-agnostic <code>execution::Executor</code> with fair-yielding <code>SerialQueue</code>s, native handles confined to backend owners, and reverse-order shutdown.
+        Complete architecture of the <code>gui-qml</code> application—covering every major QML view, controller, interface, model, operation, and execution owner, stopping cleanly at the Bitcoin Core <code>interfaces::*</code> boundary.
       </p>
       <div class="pillars">
         <div class="pillar"><strong>One-Way Dependencies</strong><span><code>View → Controller → Contract ← Model</code>. Models never know about pages or controllers.</span></div>
-        <div class="pillar"><strong>Bounded Threads</strong><span>One <code>Executor</code> (4 lanes) + 1 <code>QmlInitExecutor</code> thread + 1 payment-link <code>QThread</code>. Never scales with open wallets.</span></div>
-        <div class="pillar"><strong>Confined Native Handles</strong><span><code>interfaces::Wallet</code> &amp; <code>Handler</code> stay in backend owners and are always freed off the UI thread.</span></div>
-        <div class="pillar"><strong>Reverse-Order Teardown</strong><span>Cancel prompts → drain features → <code>appShutdown()</code> → destroy Views/Models → flush <code>DeferredDelete</code> → join threads → destroy Core roots.</span></div>
+        <div class="pillar"><strong>Bounded Threads</strong><span>One <code>Executor</code> (4 lanes) + 1 <code>QmlInitExecutor</code> thread + 1 payment-link <code>QThread</code>.</span></div>
+        <div class="pillar"><strong>Strict Core Boundary</strong><span>App stops at <code>interfaces::{Init, Node, Chain, Wallet, Handler}</code> + <code>ArgsManager</code>—no Core internals.</span></div>
+        <div class="pillar"><strong>Reverse-Order Shutdown</strong><span>Cancel prompts → drain features → <code>appShutdown()</code> → destroy Views/Models → flush <code>DeferredDelete</code> → join threads → destroy Core roots.</span></div>
       </div>
     </header>
 
@@ -192,7 +192,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
     <section id="roles">
       <h2><span class="num">01</span> Roles, Scopes &amp; Dependency Rules</h2>
       <p class="section-desc">
-        <strong>Role</strong> defines what an object does. <strong>Scope</strong> (<code>page</code>, <code>wallet</code>, <code>app</code>) defines how long it lives. Keeping the two orthogonal avoids bloated god-models and forwarding wrappers.
+        <strong>Role</strong> defines what an object does. <strong>Scope</strong> (<code>page</code>, <code>wallet</code>, <code>app</code>) defines how long it lives. Keeping them separate avoids god-models and redundant forwarding layers.
       </p>
 
       <div class="table-wrap">
@@ -205,43 +205,43 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
               <td><span class="badge b-view">View</span></td>
               <td>QML layout, bindings, focus, dialogs, and navigation. Holds no request tickets, schedulers, or native handles.</td>
               <td><code>*.qml</code></td>
-              <td><code>MainWindow.qml</code>, <code>SendCreate.qml</code>, <code>SendForm.qml</code>, <code>SendTransactionReview.qml</code></td>
+              <td><code>MainWindow.qml</code>, <code>SendForm.qml</code>, <code>ActivityListPage.qml</code>, <code>ReceivePage.qml</code>, <code>Peers.qml</code></td>
             </tr>
             <tr>
               <td><span class="badge b-ctrl">Controller</span></td>
               <td>Use-case state, prompts, busy/error state, and active operation handles. <code>BitcoinQmlApplication::run</code> is the composition root.</td>
               <td><code>*Controller</code>, <code>ShutdownCoordinator</code></td>
-              <td><code>WalletController</code>, <code>WalletPageController</code>, <code>SendDraftController</code>, <code>TransactionReviewController</code></td>
+              <td><code>WalletController</code>, <code>SendDraftController</code>, <code>TransactionReviewController</code>, <code>FeeBumpController</code>, <code>WalletPasswordController</code>, <code>PeerCommandController</code></td>
             </tr>
             <tr>
               <td><span class="badge b-iface">Interface</span></td>
               <td>Narrow abstract capability contract a controller depends on. Production models implement it; tests inject a fake.</td>
               <td>Capability contracts end in <code>*Interface</code></td>
-              <td><code>WalletAvailabilityInterface</code>, <code>SendDraftInterface</code>, <code>TransactionReviewInterface</code>, <code>SettingsEditorFactoryInterface</code></td>
+              <td><code>WalletAvailabilityInterface</code>, <code>SendDraftInterface</code>, <code>TransactionReviewInterface</code>, <code>FeeBumpInterface</code>, <code>WalletBackupInterface</code>, <code>WalletSecurityInterface</code>, <code>SettingsEditorFactoryInterface</code>, <code>PeerCommandInterface</code>, <code>PeerActionsInterface</code></td>
             </tr>
             <tr>
               <td><span class="badge b-model">Model</span></td>
-              <td>Observable domain data, drafts, item models, self-contained editors, or backend sessions. Outlives pages.</td>
-              <td><code>*Model</code> or concrete adapter name (no <code>*Interface</code>)</td>
-              <td><code>WalletModel</code>, <code>SettingsModel</code>, <code>NodeModel</code>, <code>TransactionReviewModel</code>, <code>WalletSendDraft</code>, <code>walletopening::Session</code></td>
+              <td>Observable domain data, drafts, list/proxy models, self-contained editors, or backend sessions. Outlives pages.</td>
+              <td><code>*Model</code> or concrete adapter (no <code>*Interface</code>)</td>
+              <td><code>NodeModel</code>, <code>ChainModel</code>, <code>SettingsModel</code>, <code>WalletModel</code>, <code>TransactionActivityModel</code>, <code>CoinsListModel</code>, <code>WalletReceiveModel</code>, <code>walletopening::Session</code></td>
             </tr>
             <tr>
               <td><span class="badge b-op">Operation</span></td>
               <td>One async domain request with its own terminal state, result, and error, bound to its original target.</td>
               <td>Operation contracts end in <code>*Operation</code></td>
-              <td><code>SendOperation</code>, <code>PreparationOperation</code>, <code>FileSaveOperation</code>, <code>WalletSendHandle</code>, <code>walletsend::SendTask</code></td>
+              <td><code>SendOperation</code>, <code>PreparationOperation</code>, <code>FeeBumpOperation</code>, <code>SecurityOperation</code>, <code>FileSaveOperation</code>, <code>PsbtOperation</code>, <code>PeerCommandOperation</code>, <code>PaymentImportOperation</code>, <code>ReceiveRequestOperation</code></td>
             </tr>
             <tr>
               <td><span class="badge b-exec">Executor</span></td>
-              <td>Bounded worker lanes, FIFO <code>SerialQueue</code>s, and reserved off-UI cleanup. Knows nothing about wallets, settings, Qt/QML, or Core roots.</td>
+              <td>Bounded worker lanes, fair-yielding FIFO <code>SerialQueue</code>s, and reserved off-UI cleanup. Feature-agnostic.</td>
               <td><code>execution::*</code> (Internal C++)</td>
-              <td><code>execution::Executor</code>, <code>execution::SerialQueue</code>, <code>execution::ValueCleanupQueue</code></td>
+              <td><code>execution::Executor</code>, <code>execution::SerialQueue</code>, <code>execution::ValueCleanupQueue</code>, <code>execution::OwnedWork</code></td>
             </tr>
             <tr>
               <td><span class="badge b-core">Core</span></td>
-              <td>Bitcoin Core native C++ backend interfaces (<code>bitcoin/src/interfaces/</code>). Always owned by backend C++ owners, never QML.</td>
+              <td>External Bitcoin Core boundary (<code>bitcoin/src/interfaces/</code>). Owned exclusively by backend C++ owners—never QML or page controllers.</td>
               <td><code>interfaces::*</code></td>
-              <td><code>NativeApplicationInterfaces</code>, <code>interfaces::Init</code>, <code>interfaces::Node</code>, <code>interfaces::Chain</code>, <code>interfaces::Wallet</code></td>
+              <td><code>interfaces::Init</code>, <code>interfaces::Node</code>, <code>interfaces::Chain</code>, <code>interfaces::Wallet</code>, <code>interfaces::Handler</code></td>
             </tr>
           </tbody>
         </table>
@@ -251,15 +251,15 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
       <div class="grid-3">
         <div class="rule-card">
           <h4>1. Workflow Coordination</h4>
-          <p><code>View → Controller → narrow contract → Model / Session</code>. Use an abstract <code>*Interface</code> where a test/capability seam helps, or an existing coherent facade such as <code>WalletReceiveModel</code>. Never invent forwarding controllers for symmetry.</p>
+          <p><code>View → Controller → narrow contract → Model / Session</code>. Use an abstract <code>*Interface</code> where a capability/test seam helps, or an existing coherent facade like <code>WalletReceiveModel</code>.</p>
         </div>
         <div class="rule-card">
           <h4>2. Direct Presentation</h4>
-          <p><code>View → Model / Controller</code>. QML binds directly to observable data models (<code>ActivityListModel</code>, <code>CoinsListModel</code>, <code>PeerListProxyModel</code>) and controller state without intermediary copies.</p>
+          <p><code>View → Model / Controller</code>. QML binds directly to observable models (<code>TransactionActivityModel</code>, <code>CoinsListModel</code>, <code>PeerListProxyModel</code>, <code>BlockClockModel</code>) and controller state.</p>
         </div>
         <div class="rule-card">
           <h4>3. Self-Contained Editors</h4>
-          <p><code>View → EditorModel</code>. Dedicated editor sessions (<code>SettingsEditorModel</code>, <code>PaymentRequestEditorModel</code>) own their draft, validation, and save lifecycle directly and retire cleanly when closed.</p>
+          <p><code>View → EditorModel</code>. Dedicated editor sessions (<code>SettingsEditorModel</code>, <code>PaymentRequestEditorModel</code>) own their draft, validation, and retiring-while-saving teardown directly.</p>
         </div>
       </div>
 
@@ -270,8 +270,8 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
           <tbody>
             <tr><td>Focus, layout, dialogs, navigation</td><td><span class="badge b-view">View</span> <span class="scope-pill">page</span></td><td>Local to the QML page/component. Wallet pages are created once per wallet and never rebound.</td></tr>
             <tr><td>Prompts, busy state, active requests, page errors</td><td><span class="badge b-ctrl">Controller</span> + <span class="badge b-op">Operation</span> <span class="scope-pill">page</span></td><td>One active operation per kind. Hiding a page cancels unclaimed work; committed work finishes on its wallet.</td></tr>
-            <tr><td>Domain data, drafts, wallet-wide unresolved effects</td><td><span class="badge b-model">Model</span> <span class="scope-pill">wallet / app</span></td><td>Outlives pages. Backups or unresolved fee bumps survive page dismissal until the backend settles them.</td></tr>
-            <tr><td>Native handles (<code>Wallet</code>, <code>Handler</code>)</td><td><code>walletopening::Session</code> / <code>NodeModel</code> <span class="scope-pill">wallet / app</span></td><td>Held via <code>std::unique_ptr</code> in backend owners only. Freed on a worker inside <code>stop(done)</code>—never on GUI.</td></tr>
+            <tr><td>Domain data, drafts, wallet-wide unresolved effects</td><td><span class="badge b-model">Model</span> <span class="scope-pill">wallet / app</span></td><td>Outlives pages. Backups, fee bumps, or PSBT reviews survive page dismissal until settled.</td></tr>
+            <tr><td>Native handles (<code>Wallet</code>, <code>Handler</code>)</td><td><code>walletopening::Session</code> / <code>NodeModel</code> / <code>WalletRegistry</code></td><td>Held via <code>std::unique_ptr</code> in backend owners only. Freed on a worker inside <code>stop(done)</code>—never on GUI.</td></tr>
             <tr><td>Worker threads, lanes, FIFO ordering, drain</td><td><span class="badge b-exec">Executor</span> <span class="scope-pill">app</span></td><td>Invisible to QML and Controllers. <code>SerialQueue</code> yields between tasks so sibling queues interleave fairly.</td></tr>
             <tr><td>Core roots (<code>Init</code>, <code>Node</code>, <code>Chain</code>)</td><td><code>BitcoinQmlApplication::run</code> <span class="scope-pill">app</span></td><td>Created first; moved into a final <code>std::thread</code> after <code>executor.stopAndJoin()</code>, destroyed in its body, then joined.</td></tr>
           </tbody>
@@ -279,17 +279,17 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
       </div>
     </section>
 
-    <!-- 2. OWNERSHIP & THREADS -->
+    <!-- 2. OWNERSHIP & CORE BOUNDARY -->
     <section id="ownership">
-      <h2><span class="num">02</span> Ownership Tree &amp; Runtime Threads</h2>
+      <h2><span class="num">02</span> Ownership Tree, Threads &amp; Core Interface Boundary</h2>
       <p class="section-desc">
-        Containment shows ownership directly—no arrow hairball required. Objects are constructed from top to bottom and torn down in strict reverse order so Core roots always outlive every worker thread.
+        Containment shows ownership directly. Construction flows top-to-bottom; orderly teardown unwinds bottom-to-top so every worker joins before Core roots are destroyed.
       </p>
 
       <div class="own-root">
         <div class="own-hdr">
           <div class="own-title"><span class="badge b-ctrl">Controller</span> <code>BitcoinQmlApplication::run</code> <span class="scope-pill">app root</span></div>
-          <div class="own-meta">Composition root · owns startup, shutdown coordination, and reverse-order unwind</div>
+          <div class="own-meta">Composition root · exposes app models via <code>ApplicationModels</code> singleton</div>
         </div>
         <div class="own-order">
           <span>↓ CONSTRUCTION ORDER (TOP TO BOTTOM)</span>
@@ -299,53 +299,54 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
         <div class="own-stack">
           <div class="own-box core">
             <div class="own-hdr" style="margin-bottom:4px">
-              <div class="own-title"><span class="badge b-core">Core</span> <code>NativeApplicationInterfaces</code></div>
-              <div class="own-meta">Created 1st · destroyed last in a final <code>std::thread</code> after all workers join</div>
+              <div class="own-title"><span class="badge b-core">Core Boundary</span> <code>NativeApplicationInterfaces</code></div>
+              <div class="own-meta">Created 1st · destroyed last in a final <code>std::thread</code> · app stops here (no Core internals)</div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong><code>interfaces::Init</code></strong><span>Process &amp; Core subsystem factory</span></div>
-              <div class="own-leaf"><strong><code>interfaces::Node</code></strong><span>Node lifecycle, settings, peers, RPC, prompts</span></div>
-              <div class="own-leaf"><strong><code>interfaces::Chain</code></strong><span>Chain state &amp; wallet loader interface</span></div>
+              <div class="own-leaf"><strong><code>interfaces::Init</code></strong><span>Creates <code>Node</code> &amp; <code>Chain</code> via <code>MakeGuiInit</code></span></div>
+              <div class="own-leaf"><strong><code>interfaces::Node</code></strong><span>Lifecycle, settings, peers, bans, traffic, RPC, prompts</span></div>
+              <div class="own-leaf"><strong><code>interfaces::Chain</code></strong><span>Network/tip info, block lookup, wallet loading &amp; catalog</span></div>
+              <div class="own-leaf"><strong><code>interfaces::Wallet</code> &amp; <code>Handler</code></strong><span>Acquired at runtime; owned strictly by backend sessions/models</span></div>
             </div>
           </div>
 
           <div class="own-box exec">
             <div class="own-hdr" style="margin-bottom:4px">
               <div class="own-title"><span class="badge b-exec">Executor</span> <code>execution::Executor</code> + 2 Dedicated Single-Purpose Threads</div>
-              <div class="own-meta">Fixed thread budget · never scales with open wallets or pages</div>
+              <div class="own-meta">Fixed thread count · never grows with open wallets or pages</div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong><code>Lane::Core</code> (1 worker)</strong><span>Serialized Bitcoin Core &amp; wallet calls (one task per queue turn)</span></div>
-              <div class="own-leaf"><strong><code>Lane::Priority</code> (1 worker)</strong><span><code>startShutdown()</code>, shutdown polling, RPC stop—never blocked by Core</span></div>
-              <div class="own-leaf"><strong><code>Lane::Rpc</code> (1 worker)</strong><span>Ordinary RPC console commands—isolated so slow RPCs never stall Core</span></div>
-              <div class="own-leaf"><strong><code>Lane::Utility</code> (<code>IO</code> + <code>Signer</code>)</strong><span><code>IO</code>: files, outcomes, QR, cleanup (fair-yielding) · <code>Signer</code>: external CLIs</span></div>
-              <div class="own-leaf"><strong><code>QmlInitExecutor</code> (1 <code>std::thread</code>)</strong><span>Runs <code>appInitMain()</code>, subscription cleanup, and <code>appShutdown()</code> sequentially</span></div>
-              <div class="own-leaf"><strong><code>desktopintent::transport::Service</code> (1 <code>QThread</code>)</strong><span>Live Qt event loop for <code>QLocalServer</code>, sockets, and lockfile</span></div>
+              <div class="own-leaf"><strong><code>Lane::Core</code> (1 worker)</strong><span>Serialized Core &amp; wallet calls (one task per queue turn)</span></div>
+              <div class="own-leaf"><strong><code>Lane::Priority</code> (1 worker)</strong><span><code>startShutdown()</code>, shutdown polling, RPC stop</span></div>
+              <div class="own-leaf"><strong><code>Lane::Rpc</code> (1 worker)</strong><span>Ordinary RPC console commands—isolated from Core</span></div>
+              <div class="own-leaf"><strong><code>Lane::Utility</code> (<code>IO</code> + <code>Signer</code>)</strong><span><code>IO</code>: files, outcomes, QR, cleanup · <code>Signer</code>: external CLIs</span></div>
+              <div class="own-leaf"><strong><code>QmlInitExecutor</code> (1 <code>std::thread</code>)</strong><span>Sequential <code>appInitMain()</code>, subscription cleanup, <code>appShutdown()</code></span></div>
+              <div class="own-leaf"><strong><code>desktopintent::transport::Service</code> (1 <code>QThread</code>)</strong><span>Qt event loop for <code>QLocalServer</code>, sockets, lockfile</span></div>
             </div>
           </div>
 
           <div class="own-box model">
             <div class="own-hdr" style="margin-bottom:4px">
-              <div class="own-title"><span class="badge b-ctrl">App Controllers</span> &amp; <span class="badge b-model">App Models</span> <span class="scope-pill">app</span></div>
-              <div class="own-meta">Each async owner holds its own lightweight <code>SerialQueue</code>(s) on the shared <code>Executor</code></div>
+              <div class="own-title"><span class="badge b-ctrl">App Controllers</span> &amp; <span class="badge b-model">App Models</span> (exposed via <code>ApplicationModels</code>) <span class="scope-pill">app</span></div>
+              <div class="own-meta">Async owners hold lightweight <code>SerialQueue</code>(s) on the shared <code>Executor</code></div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong><code>ShutdownCoordinator</code></strong><span>Drives the 5-step quit sequence via participant <code>stop(done)</code> hooks</span></div>
-              <div class="own-leaf"><strong><code>NodeModel</code></strong><span>Node state, <code>RuntimePromptService</code>, subscriptions, <code>StartupDiagnosticsModel</code></span></div>
-              <div class="own-leaf"><strong><code>SettingsModel</code></strong><span>Persistent settings (<code>beforeInterrupt</code> drain) &amp; <code>SettingsEditorModel</code> factory</span></div>
-              <div class="own-leaf"><strong><code>PeerListModel</code> · <code>BanListModel</code> · <code>RpcConsoleModel</code> · <code>DebugLogModel</code></strong><span>App-wide observable models on shared queues</span></div>
+              <div class="own-leaf"><strong>Lifecycle &amp; Shell</strong><span><code>ShutdownCoordinator</code>, <code>DesktopTrayIconController</code>, <code>DesktopWindowBehaviorModel</code>, <code>DesktopIntentModel</code>, <code>UiPreferences</code>, <code>QrImageProvider</code></span></div>
+              <div class="own-leaf"><strong>Node &amp; Chain</strong><span><code>NodeModel</code> (<code>NetworkModel</code>, <code>PeerCommandModel</code>, <code>RuntimePromptModel</code>, <code>StartupDiagnosticsModel</code>), <code>ChainModel</code>, <code>BlockClockModel</code>, <code>NetworkStatusModel</code>, <code>NetworkTrafficTower</code></span></div>
+              <div class="own-leaf"><strong>Peers, Console &amp; Logs</strong><span><code>PeerListModel</code>, <code>PeerListProxyModel</code>, <code>PeerDetailsModel</code>, <code>PeerSelectionModel</code>, <code>BanListModel</code>, <code>RpcConsoleModel</code>, <code>DebugLogModel</code></span></div>
+              <div class="own-leaf"><strong>Settings &amp; Onboarding</strong><span><code>SettingsModel</code> (<code>CoreSettingsModel</code>, <code>SettingsEditorModel</code>), <code>OnboardingOptionsModel</code>, <code>SignerDiscoveryModel</code></span></div>
             </div>
 
             <div class="own-box model" style="margin-top:12px">
               <div class="own-hdr" style="margin-bottom:4px">
-                <div class="own-title"><span class="badge b-ctrl">Controller</span> <code>WalletController</code> → <span class="badge b-model">WalletModel</span> (1 per loaded wallet) <span class="scope-pill">wallet</span></div>
-                <div class="own-meta">Also owns <code>WalletCreationController</code>, <code>WalletNamesController</code>, <code>WalletRegistry</code>, <code>WalletListModel</code></div>
+                <div class="own-title"><span class="badge b-ctrl">Controller</span> <code>WalletController</code> → <span class="badge b-model">WalletModel</span> (1 per open wallet) <span class="scope-pill">wallet</span></div>
+                <div class="own-meta">Also owns <code>WalletCreationController</code>, <code>WalletNamesController</code>, <code>WalletRegistry</code>, <code>WalletListModel</code>, <code>WalletSelectionModel</code></div>
               </div>
               <div class="own-subgrid">
-                <div class="own-leaf"><strong><code>walletopening::Session</code></strong><span>Single owner of <code>unique_ptr&lt;interfaces::Wallet&gt;</code>, <code>Handler</code>s, <code>Core</code> queue &amp; <code>Utility</code> cleanup</span></div>
-                <div class="own-leaf"><strong>Data Models</strong><span><code>TransactionActivityModel</code>, <code>AddressListModel</code>, <code>CoinsListModel</code>, <code>WalletReceiveModel</code></span></div>
-                <div class="own-leaf"><strong>Drafts &amp; Capability Adapters</strong><span><code>SendRecipientsListModel</code>, <code>FeeSelectionModel</code>, <code>WalletSendDraft</code>, <code>WalletTransactionReview</code></span></div>
-                <div class="own-leaf"><strong>Wallet-Wide Effects</strong><span><code>WalletBackupModel</code>, <code>FeeBumpModel</code>, <code>PsbtQmlModel</code>, balance &amp; busy state</span></div>
+                <div class="own-leaf"><strong><code>walletopening::Session</code></strong><span>Single owner of <code>unique_ptr&lt;interfaces::Wallet&gt;</code>, <code>Handler[]</code>, <code>Core</code> queue &amp; <code>Utility</code> cleanup</span></div>
+                <div class="own-leaf"><strong>Send, Coins &amp; PSBT</strong><span><code>SendRecipientsListModel</code>, <code>FeeSelectionModel</code>, <code>CoinsListModel</code>, <code>SendImportModel</code>, <code>PsbtQmlModel</code>, <code>TransactionReviewModel</code>, <code>WalletSendDraft</code>, <code>WalletTransactionReview</code></span></div>
+                <div class="own-leaf"><strong>Activity &amp; Speed Up</strong><span><code>TransactionActivityModel</code>, <code>ActivityFilterProxyModel</code>, <code>ActivityDetailModel</code>, <code>FlowDetailsModel</code>, <code>FeeBumpModel</code>, <code>BumpTransactionModel</code></span></div>
+                <div class="own-leaf"><strong>Receive, Security &amp; Backup</strong><span><code>WalletReceiveModel</code>, <code>AddressListModel</code>, <code>AddressReservationModel</code>, <code>ReceiveRequestHistoryModel</code>, <code>ReceiptReconciliationModel</code>, <code>WalletBackupModel</code>, <code>WalletSecurityModel</code>, <code>SignVerifyMessageModel</code></span></div>
               </div>
             </div>
           </div>
@@ -356,12 +357,26 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
               <div class="own-meta">Destroyed 1st on exit · followed by <code>QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete)</code></div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong><code>WalletPageController</code> subclasses</strong><span>Irreversible single-wallet binding (<code>m_bound</code>); stops on hide or wallet unavailability</span></div>
-              <div class="own-leaf"><strong><code>SendDraftController</code> &amp; <code>TransactionReviewController</code></strong><span>Own preparation, sweep consent, signer approval, send &amp; file-save <code>Operation</code> handles</span></div>
-              <div class="own-leaf"><strong><code>PaymentRequest*Controller</code> &amp; Editors</strong><span>Request view/delete controllers; <code>SettingsEditorModel</code> &amp; <code>PaymentRequestEditorModel</code></span></div>
+              <div class="own-leaf"><strong>Wallet Page Controllers</strong><span><code>WalletPageController</code> subclasses (irreversible <code>m_bound</code>): <code>SendDraftController</code>, <code>FeeBumpController</code>, <code>WalletPasswordController</code>, <code>WalletBackupController</code>, <code>PaymentRequestViewController</code>, <code>PaymentRequestDeleteController</code></span></div>
+              <div class="own-leaf"><strong>Review &amp; App Page Controllers</strong><span><code>TransactionReviewController</code> (explicit <code>active</code> vs. <code>available</code>), <code>PeerCommandController</code></span></div>
+              <div class="own-leaf"><strong>Active Operation Handles</strong><span><code>PreparationOperation</code>, <code>SendOperation</code>/<code>WalletSendHandle</code>, <code>FeeBumpOperation</code>, <code>SecurityOperation</code>, <code>FileSaveOperation</code>, <code>PsbtOperation</code>, <code>PeerCommandOperation</code>, <code>PaymentImportOperation</code>, <code>ReceiveRequestOperation</code></span></div>
             </div>
           </div>
         </div>
+      </div>
+
+      <h3>Bitcoin Core Interface Boundary (Where the QML App Stops)</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Core Interface</th><th>QML-Side Owner</th><th>Used By (App Side Only)</th><th>Destruction / Retirement</th></tr></thead>
+          <tbody>
+            <tr><td><code>interfaces::Init</code></td><td><code>NativeApplicationInterfaces</code></td><td><code>BitcoinQmlApplication::run</code> (creates <code>Node</code> &amp; <code>Chain</code>)</td><td>Destroyed last in final <code>std::thread</code> after all workers join</td></tr>
+            <tr><td><code>interfaces::Node</code></td><td><code>NativeApplicationInterfaces</code></td><td><code>QmlInitExecutor</code>, <code>NodeModel</code>, <code>SettingsModel</code>, <code>PeerListModel</code>, <code>BanListModel</code>, <code>PeerCommandModel</code>, <code>NetworkTrafficTower</code>, <code>RpcConsoleModel</code>, <code>BlockClockHistory</code></td><td>Destroyed in final <code>std::thread</code> after <code>appShutdown()</code> &amp; <code>stopAndJoin()</code></td></tr>
+            <tr><td><code>interfaces::Chain</code></td><td><code>NativeApplicationInterfaces</code></td><td><code>ChainModel</code>, <code>WalletRegistry</code>, <code>WalletListModel</code>, <code>WalletCreationController</code></td><td>Destroyed in final <code>std::thread</code> after all wallet sessions stop</td></tr>
+            <tr><td><code>interfaces::Wallet</code></td><td><code>walletopening::Session</code></td><td>Borrowed on <code>Lane::Core</code> by wallet readers/tasks (Send, Activity, Addresses, Coins, Receive, PSBT, FeeBump, Backup, Security, Sign/Verify)</td><td><code>std::unique_ptr</code> freed on <code>Lane::Utility</code> inside <code>Session::stop(done)</code></td></tr>
+            <tr><td><code>interfaces::Handler</code></td><td><code>NodeModel</code>, <code>QmlInitExecutor</code>, <code>WalletRegistry</code>, <code>Session</code></td><td>Core signal subscriptions (status, tip, wallet load/unload, tx/address changes, prompts)</td><td>Disconnected &amp; destroyed on worker (<code>Init</code> thread or <code>Utility</code>), never GUI</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -369,7 +384,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
     <section id="execution">
       <h2><span class="num">03</span> Execution &amp; Cleanup Contract</h2>
       <p class="section-desc">
-        The concurrency layer has only three small internal C++ primitives. All feature logic stays out of <code>Executor</code>.
+        All feature concurrency builds on three small internal C++ primitives in <code>execution::</code>.
       </p>
 
       <div class="grid-2">
@@ -407,232 +422,200 @@ public:
         <div class="card">
           <h3 style="margin-top:0">Key Runtime Invariants</h3>
           <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:13.5px">
-            <li style="margin-bottom:8px"><strong>Per-task yielding:</strong> <code>SerialQueue::run()</code> executes one task, destroys its captures outside the lock, and re-dispatches to the back of the lane worker if more tasks remain—preventing chunked jobs or large cleanup bursts from starving sibling queues (and staying O(1) stack on inline test dispatchers).</li>
+            <li style="margin-bottom:8px"><strong>Per-task yielding:</strong> <code>SerialQueue::run()</code> executes one task, destroys its captures outside the lock, and re-dispatches to the back of the lane worker if more tasks remain—so sibling queues interleave fairly without feature-level batch caps.</li>
             <li style="margin-bottom:8px"><strong><code>whenDrained()</code> vs. <code>Feature::stop(done)</code>:</strong> <code>whenDrained()</code> covers tasks on one queue. <code>Session::stop(done)</code> additionally disconnects handlers, runs optional <code>wallet-&gt;remove()</code>, and destroys <code>unique_ptr&lt;interfaces::Wallet&gt;</code> on <code>Utility</code> before reporting stopped.</li>
-            <li style="margin-bottom:8px"><strong>Reserved teardown cleanup (<code>ValueCleanupQueue</code>):</strong> Uses private <code>reserveCleanup()</code> / <code>postReservedCleanup()</code> / <code>postWithOutcome()</code> so already-accepted retained values, native handles, and Core outcomes still finish on <code>Utility</code> even during <code>Executor::stopAndJoin()</code>.</li>
-            <li style="margin-bottom:8px"><strong>Injectable tests:</strong> <code>Executor(Dispatch)</code> runs the exact production <code>SerialQueue</code> with manual stepping. <code>stopAndJoin()</code> skips <code>waitIdle()</code> when no real workers exist so failed assertions never hang teardown.</li>
-            <li><strong>Passive <code>close()</code> vs. explicit <code>cancel()</code>:</strong> Closing a queue stops new admissions without revoking already-supplied consent. Page dismissal revokes unclaimed send consent; once <code>consent-&gt;claim()</code> succeeds, the single Core send task finishes and records its real outcome.</li>
+            <li style="margin-bottom:8px"><strong>Reserved teardown cleanup (<code>ValueCleanupQueue</code>):</strong> Uses private <code>reserveCleanup()</code> / <code>postReservedCleanup()</code> / <code>postWithOutcome()</code> so already-accepted values, native handles, and Core outcomes still finish on <code>Utility</code> during <code>Executor::stopAndJoin()</code>.</li>
+            <li style="margin-bottom:8px"><strong>Injectable tests:</strong> <code>Executor(Dispatch)</code> drives the real <code>SerialQueue</code> deterministically, discards stale rejected callbacks atomically, and skips <code>waitIdle()</code> in <code>stopAndJoin()</code> when no real workers exist.</li>
+            <li><strong>Passive <code>close()</code> vs. explicit <code>cancel()</code>:</strong> Closing a queue stops new admissions without revoking already-supplied consent. Page dismissal withdraws unclaimed consent; once <code>consent-&gt;claim()</code> succeeds, the committed Core task finishes and records its outcome.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- 4. FEATURE BOUNDARIES -->
+    <!-- 4. FEATURE BOUNDARIES (ALL 8 AREAS) -->
     <section id="features">
-      <h2><span class="num">04</span> Feature Boundaries (Layered Component Views)</h2>
+      <h2><span class="num">04</span> Feature Relationships (All 8 App Areas)</h2>
       <p class="section-desc">
-        Each diagram isolates one area (~8–12 components) arranged strictly left-to-right from <strong>View</strong> to <strong>Core</strong>.
+        Every major area of <code>gui-qml</code> arranged strictly left-to-right from <strong>QML View</strong> to the <strong>Core <code>interfaces::*</code> boundary</strong>.
       </p>
 
       <div class="tabs" data-tabgroup="features">
-        <button class="tab active" data-target="feat-send" type="button">Send &amp; Review</button>
-        <button class="tab" data-target="feat-receive" type="button">Receive &amp; Requests</button>
-        <button class="tab" data-target="feat-wallet" type="button">Wallet Lifecycle</button>
-        <button class="tab" data-target="feat-settings" type="button">Settings &amp; Editors</button>
-        <button class="tab" data-target="feat-node" type="button">Node, Peers &amp; Console</button>
+        <button class="tab active" data-target="feat-startup" type="button">1. Startup &amp; Shell</button>
+        <button class="tab" data-target="feat-node" type="button">2. Node, Peers &amp; Console</button>
+        <button class="tab" data-target="feat-settings" type="button">3. Settings &amp; Editors</button>
+        <button class="tab" data-target="feat-wallet" type="button">4. Wallet Lifecycle</button>
+        <button class="tab" data-target="feat-send" type="button">5. Send, Coins &amp; Review</button>
+        <button class="tab" data-target="feat-activity" type="button">6. Activity &amp; Speed Up</button>
+        <button class="tab" data-target="feat-receive" type="button">7. Receive &amp; Requests</button>
+        <button class="tab" data-target="feat-security" type="button">8. Security &amp; Backup</button>
       </div>
 
-      <div class="panel active" id="feat-send">
+      <!-- 1. Startup & Shell -->
+      <div class="panel active" id="feat-startup">
         <div class="panel-head">
-          <h3>Send Creation &amp; Transaction Review</h3>
-          <p>Reusable QML components take explicit values; workflows go through narrow interfaces and single-use operations.</p>
+          <h3>1. Startup, Onboarding, Shell &amp; Desktop Integration</h3>
+          <p>Composition root, pre-init onboarding, OS payment links, tray/window behavior, and shutdown coordination.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
 flowchart LR
-  subgraph View["View (QML · page scope)"]
-    SC["SendCreate.qml"]
-    SF["SendForm.qml&lt;br/&gt;+ SendFeeSelection&lt;br/&gt;+ SendRecipientCard"]
-    SR["SendTransactionReview.qml"]
-    ES["ExternalSignerReviewActions.qml"]
+  subgraph View["Views (QML · app scope)"]
+    PRE["preinit.qml /&lt;br/&gt;OnboardingWizard.qml"]
+    MW["MainWindow.qml&lt;br/&gt;(+ DesktopNativeMenuBar,&lt;br/&gt;DesktopRequestsBar)"]
+    ERR["initerrormessage.qml /&lt;br/&gt;Shutdown.qml"]
   end
 
-  subgraph Ctrl["Controller (page scope)"]
-    SDC["SendDraftController&lt;br/&gt;(WalletPageController)"]
-    TRC["TransactionReviewController"]
+  subgraph Root["Composition &amp; Controllers"]
+    APP["BitcoinQmlApplication::run&lt;br/&gt;(ApplicationModels)"]
+    SC["ShutdownCoordinator"]
+    TRAY["DesktopTrayIconController"]
+    PREP["startup::preparation::Coordinator"]
   end
 
-  subgraph Contract["Interface &amp; Operation"]
-    SDI["SendDraftInterface"]
-    TRI["TransactionReviewInterface"]
-    PREP["PreparationOperation"]
-    SEND["SendOperation /&lt;br/&gt;WalletSendHandle"]
-    SAVE["FileSaveOperation"]
+  subgraph Models["App Services &amp; Models"]
+    ONB["OnboardingOptionsModel"]
+    DI["DesktopIntentModel"]
+    DWB["DesktopWindowBehaviorModel"]
+    UIP["UiPreferences"]
+    DIAG["StartupDiagnosticsModel"]
   end
 
-  subgraph Model["Model (wallet scope)"]
-    WSD["WalletSendDraft"]
-    WTR["WalletTransactionReview"]
-    WM["WalletModel&lt;br/&gt;(Recipients, Fees, Coins,&lt;br/&gt;TransactionReviewModel)"]
-    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
+  subgraph Exec["Threads &amp; Core Boundary"]
+    QIE["QmlInitExecutor&lt;br/&gt;(1 Init thread + Priority)"]
+    TRANS["desktopintent::transport::Service&lt;br/&gt;(1 QThread + Utility)"]
+    CORE["interfaces::Init&lt;br/&gt;interfaces::Node&lt;br/&gt;interfaces::Chain"]
   end
 
-  SC --> SF
-  SC --> SDC
-  SR --> ES
-  SR --> TRC
-  SDC --> SDI
-  SDC --> PREP
-  TRC --> TRI
-  TRC --> SEND
-  TRC --> SAVE
-  WSD -. implements .-> SDI
-  WTR -. implements .-> TRI
-  WSD --> WM
-  WTR --> WM
-  WM --> WS
-  SEND --> WS
+  PRE --> ONB
+  MW --> APP
+  MW --> TRAY
+  MW --> DI
+  MW --> DWB
+  ERR --> DIAG
+  ERR --> SC
+  APP --> SC
+  APP --> PREP
+  APP --> QIE
+  APP --> UIP
+  PREP --> TRANS
+  DI --> TRANS
+  QIE --> CORE
+  SC --> QIE
           </div>
         </div>
         <div class="panel-notes">
-          <strong>Key contracts:</strong>
+          <strong>Key relationships:</strong>
           <ul>
-            <li><code>SendForm.qml</code> takes explicit draft/fee inputs (<code>available</code>, <code>estimatedFeeSatoshi</code>, <code>estimatedFeeRate</code>, <code>feeEstimatePending</code>, <code>estimatedInputCount</code>, <code>sendTotalSatoshi</code>, <code>recipients</code>, <code>fees</code>, <code>coins</code>) and emits <code>useMaximumRequested</code>, <code>prepareRequested</code>, and <code>resetRequested</code>—never takes <code>WalletModel</code>.</li>
-            <li><code>SendDraftController</code> owns preparation sweep consent and rejects <code>resetDraft()</code> while preparing or importing; <code>SendTransactionReview.qml</code> keeps a separate broadcast sweep confirmation and binds capabilities through <code>TransactionReviewInterface</code>.</li>
-            <li><code>WalletSendHandle</code> implements <code>SendOperation</code>; once <code>walletsend::SendTask</code> claims consent on <code>Lane::Core</code>, dismissing the review page cannot cancel the broadcast.</li>
+            <li><code>ApplicationModels</code> exposes app-scoped models/controllers cleanly to QML without putting <code>Executor</code> or native handles into QML.</li>
+            <li><code>desktopintent::transport::Service</code> owns 1 dedicated <code>QThread</code> for <code>QLocalServer</code>/<code>QLocalSocket</code> IPC and forwards payment links to <code>DesktopIntentModel</code> on shared <code>Lane::Utility</code>.</li>
+            <li><code>QmlInitExecutor</code> runs <code>appInitMain()</code>, subscription cleanup, and <code>appShutdown()</code> on 1 dedicated thread while posting <code>startShutdown()</code> on shared <code>Lane::Priority</code>.</li>
           </ul>
         </div>
       </div>
 
-      <div class="panel" id="feat-receive">
+      <!-- 2. Node, Peers & Console -->
+      <div class="panel" id="feat-node">
         <div class="panel-head">
-          <h3>Receive Addresses &amp; Payment Requests</h3>
-          <p>Coherent facade + self-contained request editor + dedicated view/delete controllers.</p>
+          <h3>2. Node Status, BlockClock, Peers, Traffic, Console &amp; Logs</h3>
+          <p>Node observations on <code>Lane::Core</code>, interactive RPC on <code>Lane::Rpc</code>, shutdown polling &amp; RPC stop on <code>Lane::Priority</code>.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
 flowchart LR
-  subgraph View["View (QML · page scope)"]
-    RP["Receive.qml"]
-    RD["PaymentRequestDialog.qml"]
+  subgraph View["Views (QML)"]
+    NS["NodeShell.qml /&lt;br/&gt;NodeRunner.qml /&lt;br/&gt;BlockClock.qml"]
+    PV["Peers.qml /&lt;br/&gt;PeerDetails.qml /&lt;br/&gt;BannedPeersPopup.qml"]
+    CC["CommandConsole.qml /&lt;br/&gt;SettingsRpcConsoleView.qml /&lt;br/&gt;SettingsDebugLogView.qml"]
   end
 
-  subgraph Ctrl["Controller (page scope)"]
-    PVC["PaymentRequestViewController&lt;br/&gt;(WalletPageController)"]
-    PDC["PaymentRequestDeleteController&lt;br/&gt;(WalletPageController)"]
+  subgraph Ctrl["Controller &amp; Interfaces"]
+    PCC["PeerCommandController"]
+    PCI["PeerCommandInterface /&lt;br/&gt;PeerActionsInterface"]
+    PCO["PeerCommandOperation /&lt;br/&gt;NodePeerCommandOperation"]
   end
 
-  subgraph Op["Operation"]
-    POO["PaymentRequestOpenOperation"]
-    FSO["FileSaveOperation&lt;br/&gt;(QR image export)"]
+  subgraph Models["App Models"]
+    NM["NodeModel&lt;br/&gt;(+ NetworkModel,&lt;br/&gt;RuntimePromptModel)"]
+    CM["ChainModel /&lt;br/&gt;BlockClockModel /&lt;br/&gt;NetworkTrafficTower"]
+    PL["PeerListModel /&lt;br/&gt;PeerListProxyModel /&lt;br/&gt;PeerDetailsModel /&lt;br/&gt;BanListModel"]
+    PCM["PeerCommandModel"]
+    RPC["RpcConsoleModel /&lt;br/&gt;RpcCommandExecutor"]
+    DBG["DebugLogModel"]
   end
 
-  subgraph Model["Model (wallet scope)"]
-    WRM["WalletReceiveModel&lt;br/&gt;(coherent facade)"]
-    ARM["AddressReservationModel"]
-    PREM["PaymentRequestEditorModel&lt;br/&gt;(self-contained editor)"]
-    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
+  subgraph Core["Core Boundary"]
+    NODE["interfaces::Node&lt;br/&gt;+ interfaces::Handler"]
+    CHAIN["interfaces::Chain"]
   end
 
-  RP --> WRM
-  RP --> PREM
-  RP --> PVC
-  RD --> PDC
-  PVC --> POO
-  PVC --> FSO
-  PVC --> WRM
-  PDC --> WRM
-  WRM --> ARM
-  WRM --> WS
-  PREM --> WS
+  NS --> NM
+  NS --> CM
+  PV --> PL
+  PV --> PCC
+  CC --> RPC
+  CC --> DBG
+  PCC --> PCI
+  PCC --> PCO
+  PCM -. implements .-> PCI
+  PCO --> PCM
+  NM --> NODE
+  PCM --> NODE
+  PL --> NODE
+  RPC --> NODE
+  CM --> CHAIN
+  CM --> NODE
           </div>
         </div>
         <div class="panel-notes">
-          <strong>Why no extra Receive interface:</strong>
+          <strong>Lane isolation:</strong>
           <ul>
-            <li><code>WalletReceiveModel</code> is already a narrow, coherent wallet facade; adding a forwarding interface purely for symmetry adds boilerplate without improving testability.</li>
-            <li><code>PaymentRequestEditorModel</code> stays visible as "retiring" while its accepted backend persistence finishes on the worker, preventing premature state loss on close.</li>
+            <li><code>NodeModel::close()</code> cancels <code>RuntimePromptService</code> immediately in Step 1 of shutdown so a blocked <code>QuestionFn</code> never deadlocks queued <code>Core</code> work.</li>
+            <li><code>RpcConsoleModel</code> runs ordinary commands on <code>Lane::Rpc</code>, stops on <code>Lane::Priority</code>, and retires redacted output on <code>Lane::Utility</code>.</li>
+            <li><code>PeerListModel</code> and <code>BanListModel</code> share <code>NativeListModel</code> queues (<code>Core</code> reads + <code>Utility</code> incremental projections).</li>
           </ul>
         </div>
       </div>
 
-      <div class="panel" id="feat-wallet">
-        <div class="panel-head">
-          <h3>Wallet Loading, Creation &amp; Registry</h3>
-          <p><code>WalletController</code> coordinates app-wide wallet lifecycle; each open wallet has one <code>walletopening::Session</code>.</p>
-        </div>
-        <div class="diagram-box">
-          <div class="mermaid" data-diagram>
-flowchart LR
-  subgraph View["View (QML)"]
-    MW["MainWindow.qml /&lt;br/&gt;WalletPicker"]
-    CW["Create / Restore /&lt;br/&gt;Migrate Wizard"]
-  end
-
-  subgraph Ctrl["App Controllers"]
-    WC["WalletController"]
-    WCC["WalletCreationController"]
-    WNC["WalletNamesController"]
-  end
-
-  subgraph Model["Models &amp; Owners"]
-    WLM["WalletListModel"]
-    WR["WalletRegistry"]
-    WM["WalletModel&lt;br/&gt;(1 per open wallet)"]
-    WS["walletopening::Session"]
-  end
-
-  subgraph Core["Core &amp; Lanes"]
-    CH["interfaces::Chain"]
-    CWAL["unique_ptr&amp;lt;interfaces::Wallet&amp;gt;&lt;br/&gt;+ interfaces::Handler[]"]
-    Q["Core SerialQueue +&lt;br/&gt;Utility ValueCleanupQueue"]
-  end
-
-  MW --> WC
-  MW --> WLM
-  CW --> WCC
-  WC --> WCC
-  WC --> WNC
-  WC --> WR
-  WC --> WM
-  WM --> WS
-  WS --> CWAL
-  WS --> Q
-  WR --> CH
-  WCC --> CH
-          </div>
-        </div>
-        <div class="panel-notes">
-          <strong>Lifecycle guarantees:</strong>
-          <ul>
-            <li>Closing or unloading one wallet stops only its <code>Session</code> without affecting sibling wallets or recreating their pages.</li>
-            <li>If a wallet finishes loading after the app or destination closed, its unclaimed <code>interfaces::Wallet</code> and unload handler retire on <code>Lane::Utility</code>—never on the GUI thread.</li>
-          </ul>
-        </div>
-      </div>
-
+      <!-- 3. Settings & Editors -->
       <div class="panel" id="feat-settings">
         <div class="panel-head">
-          <h3>Settings, Editors &amp; Pre-Interrupt Persistence</h3>
-          <p>Accepted settings writes drain before Core interruption; editors persist independently.</p>
+          <h3>3. Settings, Self-Contained Editors &amp; Signer Discovery</h3>
+          <p><code>SettingsModel</code> persists changes before Core interruption; external signer CLIs run on the isolated <code>UtilityWorker::Signer</code>.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
 flowchart LR
-  subgraph View["View (QML)"]
-    SP["SettingsPages.qml"]
-    SE["Proxy / Pruning Editors"]
+  subgraph View["Views (QML)"]
+    SV["SettingsView.qml /&lt;br/&gt;Display / Storage /&lt;br/&gt;Connection / Effective"]
+    SE["ProxySettingsPage.qml /&lt;br/&gt;StorageSettingsPage.qml"]
+    ES["ExternalSignerSettingsPage.qml"]
+    WB["WindowBehaviorSettingsPage.qml"]
   end
 
   subgraph Iface["Interface"]
     SEF["SettingsEditorFactoryInterface"]
   end
 
-  subgraph Model["Models (app scope)"]
-    SM["SettingsModel&lt;br/&gt;(beforeInterrupt participant)"]
+  subgraph Models["Models (app / page)"]
+    SM["SettingsModel&lt;br/&gt;(beforeInterrupt drain)"]
     CSM["CoreSettingsModel"]
     SEM["SettingsEditorModel&lt;br/&gt;(self-contained editor)"]
-    OW["execution::OwnedWork&lt;br/&gt;(Core + Utility queues)"]
+    SDM["SignerDiscoveryModel&lt;br/&gt;(UtilityWorker::Signer)"]
+    DWB["DesktopWindowBehaviorModel"]
+    OW["execution::OwnedWork&lt;br/&gt;(Core + Utility)"]
   end
 
-  subgraph Core["Core"]
+  subgraph Core["Core Boundary"]
     NODE["interfaces::Node"]
     ARGS["ArgsManager&lt;br/&gt;(settings.json)"]
   end
 
-  SP --> SM
+  SV --> SM
   SE --> SEF
   SE --> SEM
+  ES --> SM
+  ES --> SDM
+  WB --> DWB
   SM -. implements .-> SEF
   SM --> CSM
   SM --> SEM
@@ -643,65 +626,316 @@ flowchart LR
           </div>
         </div>
         <div class="panel-notes">
-          <strong>Key contract:</strong>
+          <strong>Key boundaries:</strong>
           <ul>
-            <li><code>SettingsEditorFactoryInterface::createSettingsEditor()</code> makes factory ownership explicit (<code>SettingsModel</code> owns the returned <code>SettingsEditorModel*</code>).</li>
-            <li><code>SettingsModel</code> is registered as a <code>beforeInterrupt</code> shutdown participant so accepted user changes finish persisting to <code>settings.json</code> before <code>node.startShutdown()</code> runs.</li>
+            <li><code>SettingsEditorFactoryInterface::createSettingsEditor()</code> makes ownership clear: <code>SettingsModel</code> owns the returned <code>SettingsEditorModel*</code>.</li>
+            <li><code>SettingsEditorModel</code> remains visible in a "retiring" state until its accepted save finishes on the worker.</li>
+            <li><code>SignerDiscoveryModel</code> executes external signer binaries on <code>UtilityWorker::Signer</code> so a slow/hung CLI never starves <code>UtilityWorker::IO</code> cleanup.</li>
           </ul>
         </div>
       </div>
 
-      <div class="panel" id="feat-node">
+      <!-- 4. Wallet Lifecycle -->
+      <div class="panel" id="feat-wallet">
         <div class="panel-head">
-          <h3>Node Lifecycle, Peers, RPC Console &amp; Payment Links</h3>
-          <p>Dedicated lanes isolate slow RPCs and startup/transport I/O from interactive node reads and shutdown.</p>
+          <h3>4. Wallet Loading, Creation, Naming &amp; Registry</h3>
+          <p><code>WalletController</code> manages app-wide wallet lifecycle; each open wallet gets one <code>walletopening::Session</code> and one <code>WalletModel</code>.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
 flowchart LR
-  subgraph View["View (QML)"]
-    NS["NodeShell /&lt;br/&gt;Peers / Console"]
+  subgraph View["Views (QML)"]
+    WV["WalletView.qml /&lt;br/&gt;DesktopWallets.qml /&lt;br/&gt;WalletSelect.qml"]
+    CF["WalletCreationFlow.qml /&lt;br/&gt;WalletCreationHost.qml"]
   end
 
-  subgraph Model["App Models"]
-    NM["NodeModel&lt;br/&gt;(+ RuntimePromptService&lt;br/&gt;+ StartupDiagnosticsModel)"]
-    PL["PeerListModel /&lt;br/&gt;PeerListProxyModel"]
-    PC["PeerCommandModel&lt;br/&gt;(PeerCommandInterface /&lt;br/&gt;PeerActionsInterface)"]
-    RPC["RpcConsoleModel"]
-    DI["DesktopIntentModel"]
+  subgraph Ctrl["App Controllers"]
+    WC["WalletController"]
+    WCC["WalletCreationController"]
+    WNC["WalletNamesController"]
   end
 
-  subgraph Exec["Threads &amp; Lanes"]
-    QIE["QmlInitExecutor&lt;br/&gt;(1 lifecycle std::thread&lt;br/&gt;+ Lane::Priority)"]
-    DT["desktopintent::transport::Service&lt;br/&gt;(1 QThread + Lane::Utility)"]
-    L_CORE["Lane::Core"]
-    L_RPC["Lane::Rpc&lt;br/&gt;(+ Priority stop)"]
+  subgraph Models["Catalog, Registry &amp; Session"]
+    WLM["WalletListModel"]
+    WSM["WalletSelectionModel"]
+    WR["WalletRegistry"]
+    WCM["WalletCreationModel /&lt;br/&gt;WalletOperationModel"]
+    WM["WalletModel&lt;br/&gt;(1 per open wallet)"]
+    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
   end
 
-  subgraph Core["Core"]
-    NODE["interfaces::Node"]
+  subgraph Core["Core Boundary"]
+    CHAIN["interfaces::Chain"]
+    CWAL["unique_ptr&amp;lt;interfaces::Wallet&amp;gt;&lt;br/&gt;+ interfaces::Handler[]"]
   end
 
-  NS --> NM
-  NS --> PL
-  NS --> PC
-  NS --> RPC
-  NM --> L_CORE
-  NM --> QIE
-  PL --> L_CORE
-  PC --> L_CORE
-  RPC --> L_RPC
-  DI --> DT
-  QIE --> NODE
-  L_CORE --> NODE
-  L_RPC --> NODE
+  WV --> WC
+  WV --> WLM
+  WV --> WSM
+  CF --> WCC
+  CF --> WCM
+  WC --> WCC
+  WC --> WNC
+  WC --> WR
+  WC --> WM
+  WCC --> WCM
+  WM --> WS
+  WS --> CWAL
+  WR --> CHAIN
+  WLM --> CHAIN
+  WCC --> CHAIN
           </div>
         </div>
         <div class="panel-notes">
-          <strong>Why two dedicated threads exist outside <code>Executor</code>:</strong>
+          <strong>Key guarantees:</strong>
           <ul>
-            <li><code>QmlInitExecutor</code> owns 1 internal <code>std::thread</code> running <code>appInitMain()</code>, subscription cleanup, and <code>appShutdown()</code> sequentially—keeping <code>Lane::Core</code> free for accepted settings writes during startup while preserving Core-thread cleanup affinity.</li>
-            <li><code>desktopintent::transport::Service</code> owns 1 internal <code>QThread</code> strictly because <code>QLocalServer</code> and <code>QLocalSocket</code> require a live Qt event loop.</li>
+            <li><code>walletopening::Session</code> is the sole owner of <code>unique_ptr&lt;interfaces::Wallet&gt;</code> and its Core notification handlers, retiring them on <code>Lane::Utility</code> inside <code>Session::stop(done)</code>.</li>
+            <li>Loading or unloading one wallet never recreates sibling wallets’ pages or blocks their <code>SerialQueue</code>s.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. Send, Coins, PSBT & Review -->
+      <div class="panel" id="feat-send">
+        <div class="panel-head">
+          <h3>5. Send Creation, Coin Control, Payment/PSBT Import &amp; Review</h3>
+          <p>Reusable form components take explicit draft values; preparation, PSBT, signer approval, and send run through narrow contracts.</p>
+        </div>
+        <div class="diagram-box">
+          <div class="mermaid" data-diagram>
+flowchart LR
+  subgraph View["Views (QML · page scope)"]
+    SC["SendCreate.qml&lt;br/&gt;+ SendForm.qml&lt;br/&gt;+ SendFeeSelection"]
+    CO["WalletCoins.qml&lt;br/&gt;+ CoinsList.qml"]
+    SR["SendTransactionReview.qml&lt;br/&gt;+ ExternalSignerReviewActions&lt;br/&gt;+ SendComplete.qml"]
+  end
+
+  subgraph Ctrl["Page Controllers"]
+    SDC["SendDraftController&lt;br/&gt;(WalletPageController)"]
+    TRC["TransactionReviewController"]
+  end
+
+  subgraph Contract["Interfaces &amp; Operations"]
+    SDI["SendDraftInterface"]
+    TRI["TransactionReviewInterface"]
+    OPS["PreparationOperation /&lt;br/&gt;SendOperation (WalletSendHandle) /&lt;br/&gt;PsbtOperation / FileSaveOperation"]
+  end
+
+  subgraph Models["Wallet Models &amp; Session"]
+    WSD["WalletSendDraft"]
+    WTR["WalletTransactionReview"]
+    WM["WalletModel&lt;br/&gt;(+ SendRecipientsListModel,&lt;br/&gt;FeeSelectionModel, CoinsListModel,&lt;br/&gt;SendImportModel, PsbtQmlModel,&lt;br/&gt;TransactionReviewModel)"]
+    WS["walletopening::Session&lt;br/&gt;(+ walletsend::SendTask)"]
+  end
+
+  subgraph Core["Core Boundary"]
+    CWAL["interfaces::Wallet"]
+  end
+
+  SC --> SDC
+  CO --> WM
+  SR --> TRC
+  SDC --> SDI
+  SDC --> OPS
+  TRC --> TRI
+  TRC --> OPS
+  WSD -. implements .-> SDI
+  WTR -. implements .-> TRI
+  WSD --> WM
+  WTR --> WM
+  WM --> WS
+  OPS --> WS
+  WS --> CWAL
+          </div>
+        </div>
+        <div class="panel-notes">
+          <strong>Key contracts:</strong>
+          <ul>
+            <li><code>SendForm.qml</code>, <code>SendFeeSelection.qml</code>, <code>SendRecipientCard.qml</code>, <code>SendRecipientEditor.qml</code>, and <code>ExternalSignerReviewActions.qml</code> take explicit values/signals and never depend on <code>WalletModel</code>.</li>
+            <li><code>SendDraftController</code> owns preparation sweep consent and rejects <code>resetDraft()</code> while preparing/importing; <code>SendTransactionReview.qml</code> keeps broadcast sweep consent and binds review capabilities via <code>TransactionReviewInterface</code>.</li>
+            <li><code>SendImportModel</code> / <code>PaymentImportOperation</code> handle clipboard, file, and OS payment-link/PSBT imports into the active wallet target.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. Activity & Speed Up -->
+      <div class="panel" id="feat-activity">
+        <div class="panel-head">
+          <h3>6. Activity History, Transaction Details, Export &amp; Speed Up (Fee Bump)</h3>
+          <p>Chunked history projections yield fairly on <code>Utility</code>; unresolved fee bumps survive page dismissal on <code>WalletModel</code>.</p>
+        </div>
+        <div class="diagram-box">
+          <div class="mermaid" data-diagram>
+flowchart LR
+  subgraph View["Views (QML · page scope)"]
+    AL["ActivityListPage.qml /&lt;br/&gt;ActivityList.qml"]
+    TD["TransactionDetail.qml&lt;br/&gt;(+ TransactionFlow)"]
+    SU["SpeedUpOverlay.qml /&lt;br/&gt;SpeedUpComplete.qml"]
+  end
+
+  subgraph Ctrl["Controller, Interface &amp; Ops"]
+    FBC["FeeBumpController&lt;br/&gt;(WalletPageController)"]
+    FBI["FeeBumpInterface"]
+    FBO["FeeBumpOperation"]
+    AEO["ActivityExportOperation&lt;br/&gt;(FileSaveOperation)"]
+  end
+
+  subgraph Models["Wallet Models &amp; Session"]
+    TAM["TransactionActivityModel /&lt;br/&gt;ActivityFilterProxyModel"]
+    ADM["ActivityDetailModel /&lt;br/&gt;FlowDetailsModel"]
+    FBM["FeeBumpModel /&lt;br/&gt;BumpTransactionModel"]
+    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
+  end
+
+  subgraph Core["Core Boundary"]
+    CWAL["interfaces::Wallet"]
+  end
+
+  AL --> TAM
+  AL --> AEO
+  TD --> ADM
+  TD --> FBC
+  SU --> FBC
+  FBC --> FBI
+  FBC --> FBO
+  FBM -. implements .-> FBI
+  FBO --> FBM
+  TAM --> WS
+  ADM --> WS
+  FBM --> WS
+  AEO --> TAM
+  WS --> CWAL
+          </div>
+        </div>
+        <div class="panel-notes">
+          <strong>Key guarantees:</strong>
+          <ul>
+            <li><code>TransactionActivityModel</code> builds row projections in bounded chunks on <code>Lane::Utility</code>, yielding after each task so sibling Utility queues never starve.</li>
+            <li>If a Speed Up (RBF) fee bump outcome is uncertain or still in flight when the overlay closes, <code>FeeBumpModel</code> retains it at wallet scope until resolved.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 7. Receive & Payment Requests -->
+      <div class="panel" id="feat-receive">
+        <div class="panel-head">
+          <h3>7. Receive Addresses, Address Book &amp; Payment Requests</h3>
+          <p><code>WalletReceiveModel</code> coherent facade + self-contained request editor + view/delete controllers + QR export.</p>
+        </div>
+        <div class="diagram-box">
+          <div class="mermaid" data-diagram>
+flowchart LR
+  subgraph View["Views (QML · page scope)"]
+    RP["ReceivePage.qml /&lt;br/&gt;ReceiveRequestModal.qml"]
+    AD["AddressList.qml /&lt;br/&gt;AddressDetails.qml"]
+  end
+
+  subgraph Ctrl["Controllers &amp; Operations"]
+    PVC["PaymentRequestViewController&lt;br/&gt;(WalletPageController)"]
+    PDC["PaymentRequestDeleteController&lt;br/&gt;(WalletPageController)"]
+    RRO["ReceiveRequestOperation /&lt;br/&gt;RequestImageExportOperation&lt;br/&gt;(FileSaveOperation)"]
+  end
+
+  subgraph Models["Wallet Models &amp; Session"]
+    WRM["WalletReceiveModel&lt;br/&gt;(coherent facade)"]
+    ARM["AddressReservationModel /&lt;br/&gt;AddressListModel"]
+    PREM["PaymentRequestEditorModel&lt;br/&gt;(self-contained editor)"]
+    RHM["ReceiveRequestHistoryModel /&lt;br/&gt;ReceiptReconciliationModel /&lt;br/&gt;RequestSharingModel"]
+    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
+  end
+
+  subgraph Core["Core Boundary"]
+    CWAL["interfaces::Wallet"]
+  end
+
+  RP --> WRM
+  RP --> PREM
+  RP --> PVC
+  RP --> PDC
+  AD --> ARM
+  PVC --> RRO
+  PVC --> WRM
+  PDC --> WRM
+  WRM --> ARM
+  WRM --> RHM
+  WRM --> WS
+  PREM --> WS
+  ARM --> WS
+  RHM --> WS
+  WS --> CWAL
+          </div>
+        </div>
+        <div class="panel-notes">
+          <strong>Key boundaries:</strong>
+          <ul>
+            <li><code>WalletReceiveModel</code> is retained as a coherent facade rather than wrapped behind a redundant forwarding interface.</li>
+            <li><code>PaymentRequestEditorModel</code> stays visible while retiring accepted backend writes; <code>RequestSharingModel</code> + <code>QrImageProvider</code> render QR images on <code>Lane::Utility</code>.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 8. Wallet Security, Backup & Sign/Verify -->
+      <div class="panel" id="feat-security">
+        <div class="panel-head">
+          <h3>8. Wallet Security, Backup &amp; Sign/Verify Message</h3>
+          <p>Wallet settings pages bind irreversibly to one wallet via <code>WalletSettingsHost</code> + <code>WalletPageController</code>.</p>
+        </div>
+        <div class="diagram-box">
+          <div class="mermaid" data-diagram>
+flowchart LR
+  subgraph View["Views (QML · page scope)"]
+    WSH["WalletSettingsHost.qml /&lt;br/&gt;WalletSettingsStack.qml"]
+    WPS["WalletPasswordSettings.qml"]
+    SVM["SignVerifyMessage.qml"]
+  end
+
+  subgraph Ctrl["Page Controllers"]
+    WPC["WalletPasswordController&lt;br/&gt;(WalletPageController)"]
+    WBC["WalletBackupController&lt;br/&gt;(WalletPageController)"]
+  end
+
+  subgraph Contract["Interfaces &amp; Operations"]
+    WAI["WalletAvailabilityInterface"]
+    WSI["WalletSecurityInterface"]
+    WBI["WalletBackupInterface"]
+    SEC["SecurityOperation"]
+    BKO["BackupPolicyOperation&lt;br/&gt;(FileSaveOperation)"]
+  end
+
+  subgraph Models["Wallet Models &amp; Session"]
+    WSM["WalletSecurityModel"]
+    WBM["WalletBackupModel"]
+    SVMM["SignVerifyMessageModel"]
+    WS["walletopening::Session&lt;br/&gt;(Core + Utility queues)"]
+  end
+
+  subgraph Core["Core Boundary"]
+    CWAL["interfaces::Wallet"]
+  end
+
+  WSH --> WPS
+  WSH --> WBC
+  WPS --> WPC
+  SVM --> SVMM
+  WPC --> WSI
+  WPC --> SEC
+  WBC --> WBI
+  WBC --> BKO
+  WSI -. extends .-> WAI
+  WBI -. extends .-> WAI
+  WSM -. implements .-> WSI
+  WBM -. implements .-> WBI
+  WSM --> WS
+  WBM --> WS
+  SVMM --> WS
+  WS --> CWAL
+          </div>
+        </div>
+        <div class="panel-notes">
+          <strong>Key guarantees:</strong>
+          <ul>
+            <li><code>WalletSettingsHost</code> instantiates a fresh <code>WalletSettingsStack</code> per wallet so no wallet page controller is ever rebound to a second wallet.</li>
+            <li><code>WalletBackupModel</code> enforces app-wide destination/file-identity collision checks (refusing loaded wallet DB paths) and finishes active backups even if the page closes.</li>
           </ul>
         </div>
       </div>
@@ -711,7 +945,7 @@ flowchart LR
     <section id="sequences">
       <h2><span class="num">05</span> Concurrency &amp; Shutdown Sequences</h2>
       <p class="section-desc">
-        Time flows downward across thread lifelines. Every scenario preserves the invariant that native Core roots outlive all worker thread joins.
+        Time flows downward across thread lifelines. Core roots always outlive every worker join.
       </p>
 
       <div class="tabs" data-tabgroup="sequences">
@@ -724,7 +958,7 @@ flowchart LR
       <div class="panel active" id="seq-quit">
         <div class="panel-head">
           <h3>Orderly Application Shutdown (5 Steps)</h3>
-          <p>Used on normal quit, early startup exit, and recoverable errors.</p>
+          <p>Normal quit, early startup exit, and recoverable errors.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
@@ -738,9 +972,9 @@ sequenceDiagram
   participant Exec as Executor Workers
   participant Final as Final std::thread
 
-  Note over GUI,SC: Step 1 — Close admission &amp; cancel prompts immediately
+  Note over GUI,SC: Step 1 — Close admission &amp; cancel waiting prompts immediately
   GUI-&gt;&gt;SC: requestShutdown()
-  SC-&gt;&gt;GUI: disable windows · close() all features · cancel waiting prompts
+  SC-&gt;&gt;GUI: disable windows · close() features · cancel waiting prompts
   SC-&gt;&gt;Pre: beforeInterrupt stop(done)
   Pre--&gt;&gt;SC: settings persisted · transport QThread joined
 
@@ -754,7 +988,7 @@ sequenceDiagram
 
   Note over SC,Init: Step 4 — Shut down Core cleanly
   SC-&gt;&gt;Init: node.appShutdown() + retire subscriptions
-  Init--&gt;&gt;SC: shutdownResult() · lifecycle thread joined
+  Init--&gt;&gt;SC: shutdownResult() · Init thread joined
 
   Note over GUI,Final: Step 5 — Reverse-order unwind (Qt loop stays active during final joins)
   SC-&gt;&gt;GUI: finished → exit main event loop
@@ -771,7 +1005,7 @@ sequenceDiagram
       <div class="panel" id="seq-prompt">
         <div class="panel-head">
           <h3>Blocked Core Prompt + Queued Settings Write</h3>
-          <p>Cancelling waiting prompts in Step 1 breaks the shutdown dependency cycle before awaiting pre-interrupt drains.</p>
+          <p>Cancelling prompts in Step 1 unblocks <code>Lane::Core</code> before awaiting pre-interrupt Settings persistence.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
@@ -789,7 +1023,7 @@ sequenceDiagram
   Set-&gt;&gt;Core: post settings write [queued behind prompt]
   GUI-&gt;&gt;SC: requestShutdown()
 
-  Note over SC,NM: Step 1 runs stop hooks BEFORE beforeInterrupt drain
+  Note over SC,NM: Step 1 stop hooks run BEFORE beforeInterrupt drain
   SC-&gt;&gt;NM: node_model.close() → m_prompt_service-&gt;close()
   NM--&gt;&gt;Core: unblock QuestionFn (returns false)
   Core-&gt;&gt;Core: run queued SettingsModel write → persist settings.json
@@ -864,15 +1098,28 @@ sequenceDiagram
       </div>
     </section>
 
-    <!-- 6. CLASS DIRECTORY -->
+    <!-- 6. COMPLETE CLASS DIRECTORY -->
     <section id="catalog">
-      <h2><span class="num">06</span> Architecture Class Directory</h2>
+      <h2><span class="num">06</span> Complete QML App Class Directory</h2>
       <p class="section-desc">
-        Filter by role, scope, or keyword (native <code>Ctrl+F</code> also searches every row).
+        All main objects across the <code>gui-qml</code> project up to the Bitcoin Core <code>interfaces::*</code> boundary. Filter by area, role, scope, or keyword (native <code>Ctrl+F</code> works on every row).
       </p>
 
       <div class="filters">
-        <input class="search-input" id="catSearch" type="search" placeholder="Search class, role, lane, or responsibility…">
+        <input class="search-input" id="catSearch" type="search" placeholder="Search class, area, lane, or responsibility…">
+        <select class="select-input" id="catArea">
+          <option value="all">All areas</option>
+          <option value="Startup &amp; Shell">Startup &amp; Shell</option>
+          <option value="Execution">Execution</option>
+          <option value="Node, Peers &amp; Console">Node, Peers &amp; Console</option>
+          <option value="Settings">Settings</option>
+          <option value="Wallet Lifecycle">Wallet Lifecycle</option>
+          <option value="Send &amp; Review">Send &amp; Review</option>
+          <option value="Activity &amp; Speed Up">Activity &amp; Speed Up</option>
+          <option value="Receive &amp; Requests">Receive &amp; Requests</option>
+          <option value="Security &amp; Backup">Security &amp; Backup</option>
+          <option value="Core Boundary">Core Boundary</option>
+        </select>
         <select class="select-input" id="catRole">
           <option value="all">All roles</option>
           <option value="view">View</option>
@@ -895,14 +1142,14 @@ sequenceDiagram
       <div class="table-wrap">
         <table>
           <thead>
-            <tr><th>Type</th><th>Role</th><th>Scope</th><th>Thread / Lane</th><th>Owner &amp; Responsibility</th></tr>
+            <tr><th>Type</th><th>Area</th><th>Role</th><th>Scope</th><th>Thread / Lane</th><th>Responsibility &amp; Key Relationships</th></tr>
           </thead>
           <tbody id="catBody"></tbody>
         </table>
       </div>
 
       <div class="callout">
-        <strong>Guiding constraint:</strong> If a new class doesn’t clearly fit one of these 6 roles (+ Core) or needs its own thread pool, reconsider the boundary first—prefer a lightweight <code>SerialQueue</code> on the shared <code>Executor</code> and a narrow contract over adding new scheduling machinery.
+        <strong>Guiding constraint:</strong> Every object on the QML side fits one of the 6 roles and stops at <code>interfaces::{Init, Node, Chain, Wallet, Handler}</code> + <code>ArgsManager</code>. Prefer a lightweight <code>SerialQueue</code> and a narrow contract over adding new thread pools or scheduler layers.
       </div>
     </section>
   </main>
@@ -911,62 +1158,111 @@ sequenceDiagram
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
 const CATALOG = [
-  // Composition & Lifecycle
-  {name:"BitcoinQmlApplication::run",role:"ctrl",scope:"app",lane:"GUI",desc:"Composition root. Constructs NativeApplicationInterfaces, Executor, App Models/Controllers, and QQmlApplicationEngine; runs reverse-order teardown."},
-  {name:"ShutdownCoordinator",role:"ctrl",scope:"app",lane:"GUI",desc:"Orchestrates 5-step orderly quit: immediate stop hooks & prompt cancellation → beforeInterrupt → Priority startShutdown() → afterInterrupt → appShutdown()."},
-  {name:"NativeApplicationInterfaces",role:"core",scope:"app",lane:"Final std::thread",desc:"Holds Init, Node, and Chain. Created first; moved into a final std::thread after executor.stopAndJoin(), destroyed in its body, then joined."},
+  // Core Boundary
+  {name:"NativeApplicationInterfaces",area:"Core Boundary",role:"core",scope:"app",lane:"Final std::thread",desc:"Owns Init, Node, and Chain. Created first; moved into a final std::thread after executor.stopAndJoin(), destroyed in its body, then joined."},
+  {name:"interfaces::Init",area:"Core Boundary",role:"core",scope:"app",lane:"Init / Final thread",desc:"Core process interface created via MakeGuiInit; constructs interfaces::Node and interfaces::Chain."},
+  {name:"interfaces::Node",area:"Core Boundary",role:"core",scope:"app",lane:"Core / Priority / Rpc / Init",desc:"Core node boundary for lifecycle, settings, peers, bans, traffic, RPC, prompts, and runtime notifications."},
+  {name:"interfaces::Chain",area:"Core Boundary",role:"core",scope:"app",lane:"Core",desc:"Core chain boundary for network name, block/tip info, wallet listing, and loading wallets."},
+  {name:"interfaces::Wallet & interfaces::Handler",area:"Core Boundary",role:"core",scope:"wallet",lane:"Core / Utility cleanup",desc:"Per-wallet Core handle and notification subscriptions. Held via unique_ptr strictly inside backend owners (Session, NodeModel, WalletRegistry, QmlInitExecutor)."},
 
   // Execution
-  {name:"execution::Executor",role:"exec",scope:"app",lane:"Core / Priority / Rpc / Utility",desc:"Single app-owned worker runner (Config for real threads; Dispatch for deterministic tests). Feature-agnostic."},
-  {name:"execution::SerialQueue",role:"exec",scope:"app",lane:"Any single lane",desc:"Lightweight FIFO strand on its lane. Yields between tasks for fair lane sharing; close() + whenDrained(done) scope to one queue."},
-  {name:"execution::ValueCleanupQueue",role:"exec",scope:"app",lane:"Utility (IO)",desc:"Wraps a Utility SerialQueue with private cleanup reservations (hold / postWithOutcome) so accepted values, native handles, and Core outcomes retire off-UI during stopAndJoin()."},
-  {name:"execution::OwnedWork",role:"exec",scope:"app",lane:"Core + Utility",desc:"Tracks independent async operations for app models (Settings, editors, exports) and drains their queues on close."},
-  {name:"QmlInitExecutor",role:"exec",scope:"app",lane:"1 Init std::thread + Priority",desc:"Runs appInitMain(), subscription cleanup, and appShutdown() sequentially on 1 dedicated thread; posts startShutdown() on shared Lane::Priority."},
-  {name:"desktopintent::transport::Service",role:"exec",scope:"app",lane:"1 Transport QThread + Utility",desc:"Owns 1 QThread for QLocalServer, QLocalSocket, and QLockFile; forwards payment links to DesktopIntentModel on shared Lane::Utility."},
+  {name:"execution::Executor",area:"Execution",role:"exec",scope:"app",lane:"Core / Priority / Rpc / Utility",desc:"Single feature-agnostic worker runner (Config for production threads; Dispatch for deterministic tests)."},
+  {name:"execution::SerialQueue",area:"Execution",role:"exec",scope:"app",lane:"Any single lane",desc:"Lightweight FIFO strand on one lane. Yields after each task for fair lane sharing; close() + whenDrained(done) scope locally."},
+  {name:"execution::ValueCleanupQueue",area:"Execution",role:"exec",scope:"app",lane:"Utility (IO)",desc:"Private SerialQueue cleanup reservations (hold / postWithOutcome) keeping accepted values, native handles, and Core outcomes retiring on Utility during stopAndJoin()."},
+  {name:"execution::OwnedWork",area:"Execution",role:"exec",scope:"app",lane:"Core + Utility",desc:"Tracks independent async operations for app models (Settings, editors, exports) and drains their queues on close."},
+  {name:"execution::SnapshotQuery / OwnedCommand",area:"Execution",role:"exec",scope:"app",lane:"Core / Utility",desc:"Reusable coalescing read query and single-outcome async command wrappers over SerialQueue submission."},
+  {name:"QmlInitExecutor",area:"Execution",role:"exec",scope:"app",lane:"1 Init std::thread + Priority",desc:"Runs appInitMain(), subscription cleanup, and appShutdown() sequentially on 1 dedicated thread; posts startShutdown() on shared Lane::Priority."},
+  {name:"desktopintent::transport::Service",area:"Execution",role:"exec",scope:"app",lane:"1 Transport QThread + Utility",desc:"Owns 1 dedicated QThread for QLocalServer, QLocalSocket, and QLockFile; forwards payment links to DesktopIntentModel on shared Lane::Utility."},
 
-  // App Controllers & Models
-  {name:"NodeModel",role:"model",scope:"app",lane:"Core / Priority / Utility",desc:"Node status, sync progress, mempool, shutdown polling (Priority), RuntimePromptService, and StartupDiagnosticsModel. Closes prompts in Step 1."},
-  {name:"SettingsModel",role:"model",scope:"app",lane:"Core + Utility",desc:"Persistent app & Core settings (beforeInterrupt shutdown participant). Implements SettingsEditorFactoryInterface."},
-  {name:"SettingsEditorFactoryInterface",role:"iface",scope:"app",lane:"GUI",desc:"Abstract factory capability (createSettingsEditor()) returning a SettingsModel-owned SettingsEditorModel*."},
-  {name:"SettingsEditorModel",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained settings editor (proxy, pruning) with isolated draft, validation, and retiring-while-saving lifecycle."},
-  {name:"PeerListModel / PeerListProxyModel",role:"model",scope:"app",lane:"Core + Utility",desc:"Observable connected-peers table and sort/filter proxy on shared NativeListModel queues."},
-  {name:"PeerCommandInterface / PeerActionsInterface",role:"iface",scope:"app",lane:"GUI",desc:"Narrow contracts separating peer disconnect/ban command orchestration from node action execution."},
-  {name:"BanListModel",role:"model",scope:"app",lane:"Core + Utility",desc:"Observable banned-peers model on shared queues."},
-  {name:"RpcConsoleModel",role:"model",scope:"app",lane:"Rpc + Priority + Utility",desc:"Interactive RPC console running ordinary commands on Lane::Rpc, stop on Lane::Priority, and secret-redacted outcomes on Utility."},
-  {name:"DebugLogModel",role:"model",scope:"app",lane:"Utility",desc:"Reads and tails debug.log off the UI thread; retires mailbox via ValueCleanupQueue."},
-  {name:"DesktopIntentModel",role:"model",scope:"app",lane:"Utility",desc:"Receives and queues BIP21 payment links and FileOpen intents from OS/transport."},
-  {name:"SignerDiscoveryModel",role:"model",scope:"app",lane:"Utility (Signer) + Core",desc:"Runs external hardware-signer discovery CLIs on the isolated Signer worker so slow CLIs never starve cleanup."},
+  // Startup & Shell
+  {name:"BitcoinQmlApplication::run",area:"Startup & Shell",role:"ctrl",scope:"app",lane:"GUI",desc:"Composition root & app lifecycle owner. Wires Executor, ShutdownCoordinator, App Models/Controllers, and QQmlApplicationEngine."},
+  {name:"ApplicationModels",area:"Startup & Shell",role:"model",scope:"app",lane:"GUI",desc:"QML singleton exposing app-scoped models and controllers to QML pages without exposing Executor or Core handles."},
+  {name:"ShutdownCoordinator",area:"Startup & Shell",role:"ctrl",scope:"app",lane:"GUI",desc:"Drives 5-step orderly quit: immediate stop hooks & prompt cancel → beforeInterrupt → Priority startShutdown() → afterInterrupt → appShutdown()."},
+  {name:"startup::preparation::Coordinator",area:"Startup & Shell",role:"ctrl",scope:"app",lane:"Core + Utility",desc:"Prepares startup arguments, saved profile recovery, and existing-instance payment-link probing/forwarding."},
+  {name:"OnboardingOptionsModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Core + Utility",desc:"Backs pre-init and onboarding wizard choices (storage location, pruning, connection) before Core initialization."},
+  {name:"StartupDiagnosticsModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"Formats and retains bounded startup warnings and fatal runaway diagnostics off the UI thread."},
+  {name:"DesktopTrayIconController",area:"Startup & Shell",role:"ctrl",scope:"app",lane:"GUI",desc:"Manages desktop system tray icon visibility, menu actions, and background-node quit behavior."},
+  {name:"DesktopWindowBehaviorModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"Persists desktop tray and minimize/close window preferences on a shared Utility SerialQueue."},
+  {name:"DesktopIntentModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"Receives OS FileOpen and single-instance BIP21 payment links from desktopintent::transport::Service."},
+  {name:"UiPreferences / QrImageProvider",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"App UI preferences persistence and asynchronous QR image provider on shared Utility queues."},
+  {name:"MainWindow.qml / preinit.qml / OnboardingWizard.qml / Shutdown.qml",area:"Startup & Shell",role:"view",scope:"app",lane:"GUI",desc:"Top-level application shell, pre-init onboarding wizard, fatal error popup, and shutdown screen."},
 
-  // Wallet Controllers, Models & Session
-  {name:"WalletController",role:"ctrl",scope:"app",lane:"GUI / Core / Utility",desc:"Manages open wallets, active selection, load/unload coordination, and WalletCreationController / WalletNamesController."},
-  {name:"WalletCreationController",role:"ctrl",scope:"app",lane:"Core + Utility",desc:"Coordinates create, restore, and migrate wallet flows using shared queues and ValueCleanupQueue::postWithOutcome."},
-  {name:"WalletNamesController",role:"ctrl",scope:"app",lane:"Core + Utility",desc:"Manages wallet display names and wallet directory naming rules."},
-  {name:"WalletListModel",role:"model",scope:"app",lane:"Core + Utility",desc:"Wallet picker catalog listing available wallet databases on disk alongside open wallet status."},
-  {name:"WalletModel",role:"model",scope:"wallet",lane:"GUI (facade)",desc:"Per-wallet observable data, drafts, balances, and wallet-wide state. Owns no native interfaces::Wallet handle directly."},
-  {name:"walletopening::Session",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Single backend owner per open wallet: owns unique_ptr<interfaces::Wallet>, Handler subscriptions, Core SerialQueue, and Utility ValueCleanupQueue."},
-  {name:"WalletAvailabilityInterface",role:"iface",scope:"wallet",lane:"GUI",desc:"Base availability contract (available / availableChanged) shared by wallet page controllers."},
-  {name:"TransactionActivityModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Chunked, incremental wallet transaction history model yielding fairly on Utility."},
-  {name:"AddressListModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Address book & category/label projection model backed by Session."},
-  {name:"CoinsListModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"UTXO coin selection, manual coin control, and lock/unlock operations backed by Session."},
-  {name:"WalletReceiveModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Coherent receive facade coordinating AddressReservationModel and saved payment requests."},
-  {name:"AddressReservationModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Tracks reserved receive addresses and address-type defaults per wallet."},
-  {name:"PaymentRequestEditorModel",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained payment-request editor with isolated draft and retiring-while-saving teardown."},
-  {name:"WalletBackupModel / FeeBumpModel / PsbtQmlModel",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Wallet-wide operations whose unresolved effects (backup write, fee bump, PSBT review/sign) survive page dismissal."},
+  // Node, Peers & Console
+  {name:"NodeModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core / Priority / Utility",desc:"Node readiness, sync progress, mempool, shutdown polling (Priority), RuntimePromptService (closed in Step 1), and Core subscriptions."},
+  {name:"NetworkModel / NetworkStatusModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core + Utility",desc:"Network active toggle commands (NetworkModel) and observable connectivity status."},
+  {name:"ChainModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"GUI / Core",desc:"Exposes network name and chain metadata from interfaces::Chain."},
+  {name:"BlockClockModel / BlockClockHistory",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core + Utility",desc:"Visual block-clock sync & tip history projection backing BlockClock.qml."},
+  {name:"NetworkTrafficTower",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core + Utility",desc:"Samples total bytes in/out from interfaces::Node for NetworkTrafficGraph.qml."},
+  {name:"RuntimePromptModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Utility (IO)",desc:"Presents backend QuestionFn / message dialogs on GUI and cancels waiting prompts immediately on shutdown."},
+  {name:"PeerListModel / PeerListProxyModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core + Utility",desc:"Observable connected-peers table (NativeListModel) and sort/filter proxy (including CJDNS / local network)."},
+  {name:"PeerDetailsModel / PeerSelectionModel",area:"Node, Peers & Console",role:"model",scope:"page",lane:"GUI",desc:"Tracks selected peer details and selection state for Peers.qml / PeerDetails.qml."},
+  {name:"BanListModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core + Utility",desc:"Observable banned-peers table (NativeListModel) backed by interfaces::Node."},
+  {name:"PeerCommandController",area:"Node, Peers & Console",role:"ctrl",scope:"page",lane:"GUI",desc:"Coordinates disconnect/ban/unban peer actions and active PeerCommandOperation state."},
+  {name:"PeerCommandInterface / PeerActionsInterface",area:"Node, Peers & Console",role:"iface",scope:"app",lane:"GUI",desc:"Narrow abstract contracts decoupling PeerCommandController from PeerCommandModel / NodeModel."},
+  {name:"PeerCommandModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Core",desc:"Implements peer command interfaces and executes disconnect/ban/unban via interfaces::Node."},
+  {name:"PeerCommandOperation / NodePeerCommandOperation",area:"Node, Peers & Console",role:"op",scope:"page",lane:"Core",desc:"Single-use operation tracking one peer disconnect/ban/unban request and its terminal result."},
+  {name:"RpcConsoleModel / RpcCommandExecutor",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Rpc + Priority + Utility",desc:"Interactive RPC console executing commands on Lane::Rpc, stop on Lane::Priority, and secret-redacted output on Utility."},
+  {name:"DebugLogModel / MonospaceOutputModel",area:"Node, Peers & Console",role:"model",scope:"app",lane:"Utility (IO)",desc:"Tails debug.log off the UI thread and projects bounded monospace rows; retires mailbox via ValueCleanupQueue."},
+  {name:"NodeShell.qml / Peers.qml / PeerDetails.qml / CommandConsole.qml",area:"Node, Peers & Console",role:"view",scope:"page",lane:"GUI",desc:"Node runner shell, peers management view, RPC console view, and debug log viewer."},
 
-  // Page Controllers, Interfaces & Operations
-  {name:"WalletPageController",role:"ctrl",scope:"page",lane:"GUI",desc:"Base class for wallet page controllers with irreversible single-wallet binding (m_bound); stops on page hide or wallet loss."},
-  {name:"SendDraftInterface / WalletSendDraft",role:"iface",scope:"wallet",lane:"GUI",desc:"Narrow send-draft capability contract (draftReady(), draftReadyChanged(), sweepsWallet(), resetDraft(), startPreparation(), startImport()) implemented by WalletSendDraft."},
-  {name:"SendDraftController",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controller for SendCreate.qml: owns preparation, PSBT import, sweep consent, unlock prompts, and resetDraft() guard."},
-  {name:"TransactionReviewInterface / WalletTransactionReview",role:"iface",scope:"wallet",lane:"GUI",desc:"Narrow review capability contract (canSend, canBroadcast, canSignOnly, signer approval, file export, review errors) implemented by WalletTransactionReview."},
-  {name:"TransactionReviewController",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controller for SendTransactionReview.qml: manages send, sign-only, broadcast, external signer approval, and PSBT export."},
-  {name:"SendOperation / WalletSendHandle / walletsend::SendTask",role:"op",scope:"page",lane:"Core + Utility",desc:"Separates consumer contract (SendOperation), page handle (WalletSendHandle), and backend send execution (SendTask) across the consent->claim() boundary."},
-  {name:"PreparationOperation / FileSaveOperation / PaymentRequestOpenOperation",role:"op",scope:"page",lane:"Core / Utility",desc:"Single-use operation contracts carrying isolated terminal state, result, and error per request."},
-  {name:"PaymentRequestViewController / PaymentRequestDeleteController",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controllers for inspecting, sharing/exporting, and deleting saved payment requests."},
+  // Settings
+  {name:"SettingsModel",area:"Settings",role:"model",scope:"app",lane:"Core + Utility",desc:"App & Core settings facade (beforeInterrupt shutdown participant). Implements SettingsEditorFactoryInterface."},
+  {name:"CoreSettingsModel",area:"Settings",role:"model",scope:"app",lane:"Core + Utility",desc:"Manages staged Core settings previews, validation, and atomic writes to settings.json via OwnedWork."},
+  {name:"SettingsEditorFactoryInterface",area:"Settings",role:"iface",scope:"app",lane:"GUI",desc:"Abstract factory capability (createSettingsEditor()) returning a SettingsModel-owned SettingsEditorModel*."},
+  {name:"SettingsEditorModel",area:"Settings",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained settings editor (proxy, pruning) with isolated draft and retiring-while-saving teardown."},
+  {name:"SignerDiscoveryModel",area:"Settings",role:"model",scope:"app",lane:"Utility (Signer) + Core",desc:"Runs external hardware-signer discovery CLIs on isolated UtilityWorker::Signer so slow CLIs never starve cleanup."},
+  {name:"SettingsView.qml / ProxySettingsPage.qml / StorageSettingsPage.qml",area:"Settings",role:"view",scope:"page",lane:"GUI",desc:"Settings navigation shell and individual display, storage, proxy, connection, signer, and window-behavior pages."},
 
-  // Key Views
-  {name:"MainWindow.qml",role:"view",scope:"app",lane:"GUI",desc:"Application shell routing node/wallet modes, native menus, desktop intents, and shutdown presentation."},
-  {name:"SendCreate.qml & SendForm.qml",role:"view",scope:"page",lane:"GUI",desc:"SendCreate handles page layout, popups, and imports; reusable SendForm takes explicit draft/fee values and emits user-intent signals."},
-  {name:"SendTransactionReview.qml & ExternalSignerReviewActions.qml",role:"view",scope:"page",lane:"GUI",desc:"Displays prepared/imported transaction review, broadcast sweep confirmation, and external signer approval via TransactionReviewController."}
+  // Wallet Lifecycle
+  {name:"WalletController",area:"Wallet Lifecycle",role:"ctrl",scope:"app",lane:"GUI / Core / Utility",desc:"Coordinates open wallets, active selection, load/close commands, and shutdown draining of all wallet sessions."},
+  {name:"WalletCreationController",area:"Wallet Lifecycle",role:"ctrl",scope:"app",lane:"Core + Utility",desc:"Coordinates create, restore, and migrate wallet workflows via ValueCleanupQueue::postWithOutcome."},
+  {name:"WalletNamesController",area:"Wallet Lifecycle",role:"ctrl",scope:"app",lane:"Core + Utility",desc:"Manages wallet display names and wallet directory naming rules."},
+  {name:"WalletRegistry",area:"Wallet Lifecycle",role:"model",scope:"app",lane:"Core + Utility",desc:"Tracks open wallet sessions, same-name reopen barriers, and interfaces::Chain wallet load/unload subscriptions."},
+  {name:"WalletListModel / WalletSelectionModel",area:"Wallet Lifecycle",role:"model",scope:"app",lane:"Core + Utility",desc:"Lists available wallet directories on disk alongside open wallet status and current selection."},
+  {name:"WalletCreationModel / WalletOperationModel",area:"Wallet Lifecycle",role:"model",scope:"page",lane:"Core + Utility",desc:"Observable creation wizard state and active wallet load/create/restore/migrate operation presentation."},
+  {name:"WalletModel",area:"Wallet Lifecycle",role:"model",scope:"wallet",lane:"GUI (facade)",desc:"Per-wallet observable data, drafts, balances, and wallet-wide state. Owns no native interfaces::Wallet handle directly."},
+  {name:"walletopening::Session",area:"Wallet Lifecycle",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Single owner per open wallet of unique_ptr<interfaces::Wallet>, Handler[], Core SerialQueue, and Utility ValueCleanupQueue."},
+  {name:"WalletAvailabilityInterface",area:"Wallet Lifecycle",role:"iface",scope:"wallet",lane:"GUI",desc:"Base availability contract (available / availableChanged) extended by wallet capability interfaces."},
+  {name:"WalletPageController",area:"Wallet Lifecycle",role:"ctrl",scope:"page",lane:"GUI",desc:"Base class for wallet page controllers with irreversible single-wallet binding (m_bound); stops on hide or wallet unavailability."},
+  {name:"WalletView.qml / DesktopWallets.qml / WalletCreationFlow.qml",area:"Wallet Lifecycle",role:"view",scope:"wallet",lane:"GUI",desc:"Wallet shell, desktop wallet switcher, picker, and creation/restore/migration wizard pages."},
+
+  // Send & Review
+  {name:"SendDraftController",area:"Send & Review",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controller for SendCreate.qml: owns preparation, PSBT import, preparation sweep consent, unlock prompts, and resetDraft() guard."},
+  {name:"SendDraftInterface / WalletSendDraft",area:"Send & Review",role:"iface",scope:"wallet",lane:"GUI",desc:"Narrow send-draft capability contract (draftReady(), draftReadyChanged(), sweepsWallet(), resetDraft(), startPreparation(), startImport()) implemented by WalletSendDraft."},
+  {name:"TransactionReviewController",area:"Send & Review",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controller for SendTransactionReview.qml: manages send, sign-only, broadcast, external signer approval, and PSBT export."},
+  {name:"TransactionReviewInterface / WalletTransactionReview",area:"Send & Review",role:"iface",scope:"wallet",lane:"GUI",desc:"Narrow review capability contract (canSend, canBroadcast, canSignOnly, needsRevalidation, signer approval, file export) implemented by WalletTransactionReview."},
+  {name:"SendOperation / WalletSendHandle / walletsend::SendTask",area:"Send & Review",role:"op",scope:"page",lane:"Core + Utility",desc:"Separates consumer contract (SendOperation), page handle (WalletSendHandle), and backend execution (SendTask) across consent->claim()."},
+  {name:"PreparationOperation / PsbtOperation / FileSaveOperation",area:"Send & Review",role:"op",scope:"page",lane:"Core / Utility",desc:"Single-use operations for transaction preparation, PSBT import/sign, and file export."},
+  {name:"SendRecipientsListModel / FeeSelectionModel / CoinsListModel",area:"Send & Review",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Observable send recipients draft, fee rate/target estimator, and UTXO coin selection / lock model."},
+  {name:"SendImportModel / PaymentImportOperation / WalletImportTarget",area:"Send & Review",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Imports BIP21 URIs, clipboard text, and PSBT files into the send draft or review flow."},
+  {name:"PsbtQmlModel / TransactionReviewModel",area:"Send & Review",role:"model",scope:"wallet",lane:"Core + Utility",desc:"PSBT review/signing/verification backend and immutable prepared transaction review snapshot."},
+  {name:"SendCreate.qml / SendForm.qml / SendTransactionReview.qml / WalletCoins.qml",area:"Send & Review",role:"view",scope:"page",lane:"GUI",desc:"Send creation page, decoupled reusable SendForm, coin picker, review page, and ExternalSignerReviewActions."},
+
+  // Activity & Speed Up
+  {name:"TransactionActivityModel / ActivityFilterProxyModel",area:"Activity & Speed Up",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Chunked incremental transaction history store (fair-yielding on Utility) plus search/filter proxy."},
+  {name:"ActivityDetailModel / FlowDetailsModel",area:"Activity & Speed Up",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Detailed transaction inspection and input/output flow graph projection for TransactionDetail.qml."},
+  {name:"ActivityExportOperation",area:"Activity & Speed Up",role:"op",scope:"page",lane:"Utility (IO)",desc:"Implements FileSaveOperation to export an immutable Activity snapshot off the UI thread."},
+  {name:"FeeBumpController",area:"Activity & Speed Up",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController for SpeedUpOverlay.qml managing RBF fee-bump preparation, unlock, and commit."},
+  {name:"FeeBumpInterface / FeeBumpOperation",area:"Activity & Speed Up",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow RBF fee-bump capability contract and single-use operation handle."},
+  {name:"FeeBumpModel / BumpTransactionModel",area:"Activity & Speed Up",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Implements FeeBumpInterface; retains unresolved fee-bump outcomes at wallet scope if the overlay closes."},
+  {name:"ActivityListPage.qml / TransactionDetail.qml / SpeedUpOverlay.qml",area:"Activity & Speed Up",role:"view",scope:"page",lane:"GUI",desc:"Activity list, transaction detail/flow view, and RBF Speed Up overlay pages."},
+
+  // Receive & Requests
+  {name:"WalletReceiveModel",area:"Receive & Requests",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Coherent receive facade coordinating address reservation, payment request history, and receipt reconciliation."},
+  {name:"AddressReservationModel / AddressListModel",area:"Receive & Requests",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Reserves receive addresses/defaults and projects wallet receive/change address book rows."},
+  {name:"PaymentRequestEditorModel",area:"Receive & Requests",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained payment-request editor with isolated draft and retiring-while-saving teardown."},
+  {name:"ReceiveRequestHistoryModel / ReceiptReconciliationModel / RequestSharingModel",area:"Receive & Requests",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Saved payment requests store, incoming-payment reconciliation, and QR/URI sharing state."},
+  {name:"PaymentRequestViewController / PaymentRequestDeleteController",area:"Receive & Requests",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController subclasses for opening, exporting QR images, and deleting saved payment requests."},
+  {name:"ReceiveRequestOperation / RequestImageExportOperation",area:"Receive & Requests",role:"op",scope:"page",lane:"Core / Utility",desc:"Single-use operations for saved request mutations and QR PNG export (FileSaveOperation)."},
+  {name:"ReceivePage.qml / AddressList.qml / AddressDetails.qml",area:"Receive & Requests",role:"view",scope:"page",lane:"GUI",desc:"Receive flow, address book list, and address details views."},
+
+  // Security & Backup
+  {name:"WalletPasswordController",area:"Security & Backup",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController for WalletPasswordSettings.qml managing encrypt and passphrase change operations."},
+  {name:"WalletSecurityInterface / WalletSecurityModel / SecurityOperation",area:"Security & Backup",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow security capability contract, backend model, and operation for wallet encryption and passphrase changes."},
+  {name:"WalletBackupController",area:"Security & Backup",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController coordinating wallet backup file selection and BackupPolicyOperation state."},
+  {name:"WalletBackupInterface / WalletBackupModel / BackupPolicyOperation",area:"Security & Backup",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow backup contract, shared-authority destination collision check, and FileSaveOperation surviving page dismissal."},
+  {name:"SignVerifyMessageModel",area:"Security & Backup",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Signs and verifies Bitcoin messages on Session without holding native handles on GUI."},
+  {name:"WalletSettingsHost.qml / WalletSettingsStack.qml / WalletPasswordSettings.qml / SignVerifyMessage.qml",area:"Security & Backup",role:"view",scope:"page",lane:"GUI",desc:"Per-wallet settings host (creates a fresh stack per wallet), password settings, and sign/verify message views."}
 ];
 
 const ROLE_META = {
@@ -979,9 +1275,9 @@ const ROLE_META = {
   core: ["Core", "b-core"]
 };
 
-// Render Catalog
 const catBody = document.getElementById("catBody");
 const catSearch = document.getElementById("catSearch");
+const catArea = document.getElementById("catArea");
 const catRole = document.getElementById("catRole");
 const catScope = document.getElementById("catScope");
 const catCount = document.getElementById("catCount");
@@ -990,12 +1286,14 @@ function esc(s){return String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;","
 
 function renderCatalog(){
   const q = catSearch.value.trim().toLowerCase();
+  const a = catArea.value;
   const r = catRole.value;
   const sc = catScope.value;
   const rows = CATALOG.filter(item => {
+    if (a !== "all" && item.area !== a) return false;
     if (r !== "all" && item.role !== r) return false;
     if (sc !== "all" && item.scope !== sc) return false;
-    if (q && !(item.name + " " + item.lane + " " + item.desc + " " + ROLE_META[item.role][0]).toLowerCase().includes(q)) return false;
+    if (q && !(item.name + " " + item.area + " " + item.lane + " " + item.desc + " " + ROLE_META[item.role][0]).toLowerCase().includes(q)) return false;
     return true;
   });
   catCount.textContent = rows.length + " / " + CATALOG.length + " shown";
@@ -1003,14 +1301,16 @@ function renderCatalog(){
     const [label, cls] = ROLE_META[item.role];
     return `<tr>
       <td><code>${esc(item.name)}</code></td>
+      <td style="white-space:nowrap;color:var(--subtle);font-size:12.5px">${esc(item.area)}</td>
       <td><span class="badge ${cls}">${label}</span></td>
       <td><span class="scope-pill">${esc(item.scope)}</span></td>
       <td><code>${esc(item.lane)}</code></td>
       <td>${esc(item.desc)}</td>
     </tr>`;
-  }).join("") || `<tr><td colspan="5" style="color:var(--subtle);text-align:center;padding:24px">No matching types.</td></tr>`;
+  }).join("") || `<tr><td colspan="6" style="color:var(--subtle);text-align:center;padding:24px">No matching types.</td></tr>`;
 }
 catSearch.addEventListener("input", renderCatalog);
+catArea.addEventListener("change", renderCatalog);
 catRole.addEventListener("change", renderCatalog);
 catScope.addEventListener("change", renderCatalog);
 renderCatalog();
@@ -1040,8 +1340,8 @@ function mermaidConfig(){
       noteBkgColor: "#fff7ed", noteBorderColor: "#f7931a", noteTextColor: "#7c2d12",
       fontFamily: "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif"
     },
-    flowchart: { htmlLabels: true, curve: "basis", padding: 14, nodeSpacing: 36, rankSpacing: 46 },
-    sequence: { mirrorActors: false, actorMargin: 42, messageMargin: 32, boxMargin: 10, useMaxWidth: true }
+    flowchart: { htmlLabels: true, curve: "basis", padding: 14, nodeSpacing: 34, rankSpacing: 44 },
+    sequence: { mirrorActors: false, actorMargin: 40, messageMargin: 30, boxMargin: 10, useMaxWidth: true }
   };
 }
 
@@ -1062,7 +1362,6 @@ async function renderVisibleDiagrams(force){
   }
 }
 
-// Tabs
 document.querySelectorAll(".tabs").forEach(group => {
   group.addEventListener("click", e => {
     const btn = e.target.closest(".tab");
@@ -1075,7 +1374,6 @@ document.querySelectorAll(".tabs").forEach(group => {
   });
 });
 
-// Theme toggle
 const themeBtn = document.getElementById("themeToggle");
 function applyTheme(theme){
   if (theme === "dark") {
@@ -1096,7 +1394,6 @@ try {
   if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) applyTheme("dark");
 } catch {}
 
-// Active sidebar link on scroll
 const navLinks = [...document.querySelectorAll("#sideNav a")];
 const sections = navLinks.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
 const obs = new IntersectionObserver(entries => {
