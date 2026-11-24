@@ -1,7 +1,7 @@
 # GUI QML PR #1142 — End Model & Step-by-Step Refactor Plan
 
 **Baseline:** [bitcoin-core/gui-qml#1142](https://github.com/bitcoin-core/gui-qml/pull/1142) · head `bc79778bb5661ea6fee9ae084801919772328532` · base `db9aa8429ac228ebf51a17804ca3da200f4f7fc0` · dependency tip `038668df86e764cf18ae5502fc7f8e3aff67072e` (51 dependency commits + 50 PR-owned commits) · Core `44901d8f64cb617714707bd025ecd83f108353c2`.  
-**Interactive diagram:** [https://johnny9.github.io/gui-qml-object-model/](https://johnny9.github.io/gui-qml-object-model/) ([index.html](index.html)).
+**Interactive diagram:** [https://johnny9.dev/gui-qml-object-model/](https://johnny9.dev/gui-qml-object-model/) ([index.html](index.html)).
 
 ---
 
