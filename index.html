@@ -312,16 +312,16 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
 
           <div class="own-box exec">
             <div class="own-hdr" style="margin-bottom:4px">
-              <div class="own-title"><span class="badge b-exec">Executor</span> <code>execution::Executor</code> + 2 Dedicated Single-Purpose Threads</div>
+              <div class="own-title"><span class="badge b-exec">Executor</span> <code>execution::Executor</code> + 3 Dedicated Single-Purpose Threads</div>
               <div class="own-meta">Fixed thread count · never grows with open wallets or pages</div>
             </div>
             <div class="own-subgrid">
               <div class="own-leaf"><strong><code>Lane::Core</code> (1 worker)</strong><span>Serialized Core &amp; wallet calls (one task per queue turn)</span></div>
-              <div class="own-leaf"><strong><code>Lane::Priority</code> (1 worker)</strong><span><code>startShutdown()</code>, shutdown polling, RPC stop</span></div>
+              <div class="own-leaf"><strong><code>Lane::Priority</code> (1 worker)</strong><span><code>startShutdown()</code>, shutdown polling, settings writes, RPC stop</span></div>
               <div class="own-leaf"><strong><code>Lane::Rpc</code> (1 worker)</strong><span>Ordinary RPC console commands—isolated from Core</span></div>
-              <div class="own-leaf"><strong><code>Lane::Utility</code> (<code>IO</code> + <code>Signer</code>)</strong><span><code>IO</code>: files, outcomes, QR, cleanup · <code>Signer</code>: external CLIs</span></div>
+              <div class="own-leaf"><strong><code>Lane::Utility</code> (<code>IO</code> + <code>Signer</code> + <code>Cleanup</code>)</strong><span><code>IO</code>: files, outcomes, QR, preferences · <code>Signer</code>: external CLIs · <code>Cleanup</code>: native wallet release</span></div>
               <div class="own-leaf"><strong><code>QmlInitExecutor</code> (1 <code>std::thread</code>)</strong><span>Sequential <code>appInitMain()</code>, subscription cleanup, <code>appShutdown()</code></span></div>
-              <div class="own-leaf"><strong><code>desktopintent::transport::Service</code> (1 <code>QThread</code>)</strong><span>Qt event loop for <code>QLocalServer</code>, sockets, lockfile</span></div>
+              <div class="own-leaf"><strong><code>desktopintent::transport::Service</code> (1 <code>QThread</code>) &amp; <code>qtlog</code> (1 <code>std::thread</code>)</strong><span>Qt IPC event loop (<code>QLocalServer</code>/sockets) and async Qt log sink</span></div>
             </div>
           </div>
 
@@ -331,7 +331,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
               <div class="own-meta">Async owners hold lightweight <code>SerialQueue</code>(s) on the shared <code>Executor</code></div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong>Lifecycle &amp; Shell</strong><span><code>ShutdownCoordinator</code>, <code>DesktopTrayIconController</code>, <code>DesktopWindowBehaviorModel</code>, <code>DesktopIntentModel</code>, <code>UiPreferences</code>, <code>QrImageProvider</code></span></div>
+              <div class="own-leaf"><strong>Lifecycle &amp; Shell</strong><span><code>ShutdownCoordinator</code>, <code>DesktopTrayIconController</code>, <code>DesktopWindowBehaviorModel</code>, <code>DesktopIntentModel</code>, <code>UiPreferencesStore</code>, <code>QRImageProvider</code></span></div>
               <div class="own-leaf"><strong>Node &amp; Chain</strong><span><code>NodeModel</code> (<code>NetworkModel</code>, <code>PeerCommandModel</code>, <code>RuntimePromptModel</code>, <code>StartupDiagnosticsModel</code>), <code>ChainModel</code>, <code>BlockClockModel</code>, <code>NetworkStatusModel</code>, <code>NetworkTrafficTower</code></span></div>
               <div class="own-leaf"><strong>Peers, Console &amp; Logs</strong><span><code>PeerListModel</code>, <code>PeerListProxyModel</code>, <code>PeerDetailsModel</code>, <code>PeerSelectionModel</code>, <code>BanListModel</code>, <code>RpcConsoleModel</code>, <code>DebugLogModel</code></span></div>
               <div class="own-leaf"><strong>Settings &amp; Onboarding</strong><span><code>SettingsModel</code> (<code>CoreSettingsModel</code>, <code>SettingsEditorModel</code>), <code>OnboardingOptionsModel</code>, <code>SignerDiscoveryModel</code></span></div>
@@ -343,7 +343,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
                 <div class="own-meta">Also owns <code>WalletCreationController</code>, <code>WalletNamesController</code>, <code>WalletRegistry</code>, <code>WalletListModel</code>, <code>WalletSelectionModel</code></div>
               </div>
               <div class="own-subgrid">
-                <div class="own-leaf"><strong><code>walletopening::Session</code></strong><span>Single owner of <code>unique_ptr&lt;interfaces::Wallet&gt;</code>, <code>Handler[]</code>, <code>Core</code> queue &amp; <code>Utility</code> cleanup</span></div>
+                <div class="own-leaf"><strong><code>walletopening::Session</code></strong><span>Single owner of <code>unique_ptr&lt;interfaces::Wallet&gt;</code>, <code>Handler[]</code>, <code>Core</code> queue &amp; <code>Utility::Cleanup</code> release</span></div>
                 <div class="own-leaf"><strong>Send, Coins &amp; PSBT</strong><span><code>SendRecipientsListModel</code>, <code>FeeSelectionModel</code>, <code>CoinsListModel</code>, <code>SendImportModel</code>, <code>PsbtQmlModel</code>, <code>TransactionReviewModel</code>, <code>WalletSendDraft</code>, <code>WalletTransactionReview</code></span></div>
                 <div class="own-leaf"><strong>Activity &amp; Speed Up</strong><span><code>TransactionActivityModel</code>, <code>ActivityFilterProxyModel</code>, <code>ActivityDetailModel</code>, <code>FlowDetailsModel</code>, <code>FeeBumpModel</code>, <code>BumpTransactionModel</code></span></div>
                 <div class="own-leaf"><strong>Receive, Security &amp; Backup</strong><span><code>WalletReceiveModel</code>, <code>AddressListModel</code>, <code>AddressReservationModel</code>, <code>ReceiveRequestHistoryModel</code>, <code>ReceiptReconciliationModel</code>, <code>WalletBackupModel</code>, <code>WalletSecurityModel</code>, <code>SignVerifyMessageModel</code></span></div>
@@ -357,9 +357,9 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
               <div class="own-meta">Destroyed 1st on exit · followed by <code>QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete)</code></div>
             </div>
             <div class="own-subgrid">
-              <div class="own-leaf"><strong>Wallet Page Controllers</strong><span><code>WalletPageController</code> subclasses (irreversible <code>m_bound</code>): <code>SendDraftController</code>, <code>FeeBumpController</code>, <code>WalletPasswordController</code>, <code>WalletBackupController</code>, <code>PaymentRequestViewController</code>, <code>PaymentRequestDeleteController</code></span></div>
-              <div class="own-leaf"><strong>Review &amp; App Page Controllers</strong><span><code>TransactionReviewController</code> (explicit <code>active</code> vs. <code>available</code>), <code>PeerCommandController</code></span></div>
-              <div class="own-leaf"><strong>Active Operation Handles</strong><span><code>PreparationOperation</code>, <code>SendOperation</code>/<code>WalletSendHandle</code>, <code>FeeBumpOperation</code>, <code>SecurityOperation</code>, <code>FileSaveOperation</code>, <code>PsbtOperation</code>, <code>PeerCommandOperation</code>, <code>PaymentImportOperation</code>, <code>ReceiveRequestOperation</code></span></div>
+              <div class="own-leaf"><strong><code>WalletPageController</code> Subclasses</strong><span>Irreversible single-wallet <code>m_bound</code>: <code>FeeBumpController</code>, <code>WalletPasswordController</code>, <code>WalletBackupController</code></span></div>
+              <div class="own-leaf"><strong>Other Page Controllers</strong><span>Cancel/drop pending state on hide or target change: <code>SendDraftController</code>, <code>TransactionReviewController</code>, <code>PaymentRequestViewController</code>, <code>PaymentRequestDeleteController</code>, <code>ActivityDetailController</code>, <code>PeerCommandController</code>, <code>SettingsNavigationController</code></span></div>
+              <div class="own-leaf"><strong>Active Operation Handles</strong><span><code>PreparationOperation</code>, <code>SendOperation</code>/<code>WalletSendHandle</code>, <code>FeeBumpOperation</code>, <code>SecurityOperation</code>, <code>FileSaveOperation</code>/<code>BackupFileOperation</code>, <code>PsbtOperation</code>, <code>PeerCommandOperation</code>, <code>PaymentImportOperation</code>, <code>ReceiveRequestOperation</code></span></div>
             </div>
           </div>
         </div>
@@ -393,7 +393,7 @@ tbody tr:hover{background:color-mix(in srgb,var(--surface-alt) 60%,transparent)}
           <pre><code>namespace execution {
 
 enum class Lane { Core, Priority, Rpc, Utility };
-enum class UtilityWorker { IO, Signer };
+enum class UtilityWorker { IO, Signer, Cleanup };
 
 class SerialQueue {
 public:
@@ -476,7 +476,7 @@ flowchart LR
     ONB["OnboardingOptionsModel"]
     DI["DesktopIntentModel"]
     DWB["DesktopWindowBehaviorModel"]
-    UIP["UiPreferences"]
+    UIP["UiPreferencesStore"]
     DIAG["StartupDiagnosticsModel"]
   end
 
@@ -711,7 +711,7 @@ flowchart LR
   end
 
   subgraph Ctrl["Page Controllers"]
-    SDC["SendDraftController&lt;br/&gt;(WalletPageController)"]
+    SDC["SendDraftController"]
     TRC["TransactionReviewController"]
   end
 
@@ -831,8 +831,8 @@ flowchart LR
   end
 
   subgraph Ctrl["Controllers &amp; Operations"]
-    PVC["PaymentRequestViewController&lt;br/&gt;(WalletPageController)"]
-    PDC["PaymentRequestDeleteController&lt;br/&gt;(WalletPageController)"]
+    PVC["PaymentRequestViewController"]
+    PDC["PaymentRequestDeleteController"]
     RRO["ReceiveRequestOperation /&lt;br/&gt;RequestImageExportOperation&lt;br/&gt;(FileSaveOperation)"]
   end
 
@@ -869,7 +869,7 @@ flowchart LR
           <strong>Key boundaries:</strong>
           <ul>
             <li><code>WalletReceiveModel</code> is retained as a coherent facade rather than wrapped behind a redundant forwarding interface.</li>
-            <li><code>PaymentRequestEditorModel</code> stays visible while retiring accepted backend writes; <code>RequestSharingModel</code> + <code>QrImageProvider</code> render QR images on <code>Lane::Utility</code>.</li>
+            <li><code>PaymentRequestEditorModel</code> stays visible while retiring accepted backend writes; <code>RequestSharingModel</code> + <code>QRImageProvider</code> render QR images on <code>Lane::Utility</code>.</li>
           </ul>
         </div>
       </div>
@@ -899,7 +899,7 @@ flowchart LR
     WSI["WalletSecurityInterface"]
     WBI["WalletBackupInterface"]
     SEC["SecurityOperation"]
-    BKO["BackupPolicyOperation&lt;br/&gt;(FileSaveOperation)"]
+    BKO["BackupFileOperation&lt;br/&gt;(FileSaveOperation)"]
   end
 
   subgraph Models["Wallet Models &amp; Session"]
@@ -1004,8 +1004,8 @@ sequenceDiagram
 
       <div class="panel" id="seq-prompt">
         <div class="panel-head">
-          <h3>Blocked Core Prompt + Queued Settings Write</h3>
-          <p>Cancelling prompts in Step 1 unblocks <code>Lane::Core</code> before awaiting pre-interrupt Settings persistence.</p>
+          <h3>Blocked Core Worker + Pre-Interrupt Settings Write</h3>
+          <p><code>SettingsModel</code> runs on <code>Lane::Priority</code> and <code>UiPreferencesStore</code> on <code>Lane::Utility</code>, so neither waits behind a wallet load or prompt holding <code>Lane::Core</code> before Step 2 interrupts Core.</p>
         </div>
         <div class="diagram-box">
           <div class="mermaid" data-diagram>
@@ -1017,17 +1017,17 @@ sequenceDiagram
   participant Set as SettingsModel
   participant Pri as Lane::Priority
 
-  Core-&gt;&gt;NM: QuestionFn("Continue?") [blocks Core worker]
+  Core-&gt;&gt;NM: QuestionFn("Continue?") or wallet load [holds Core worker]
   NM--&gt;&gt;GUI: show runtime prompt dialog
   GUI-&gt;&gt;Set: setMaxMempoolSizeMB(newVal)
-  Set-&gt;&gt;Core: post settings write [queued behind prompt]
+  Set-&gt;&gt;Pri: post settings write [avoids Lane::Core]
   GUI-&gt;&gt;SC: requestShutdown()
 
   Note over SC,NM: Step 1 stop hooks run BEFORE beforeInterrupt drain
   SC-&gt;&gt;NM: node_model.close() → m_prompt_service-&gt;close()
   NM--&gt;&gt;Core: unblock QuestionFn (returns false)
-  Core-&gt;&gt;Core: run queued SettingsModel write → persist settings.json
-  Core--&gt;&gt;Set: write complete
+  Pri-&gt;&gt;Pri: run queued SettingsModel write → persist settings.json
+  Pri--&gt;&gt;Set: write complete
   Set--&gt;&gt;SC: shutdownFinished()
 
   Note over SC,Pri: Step 2 only begins after Settings persisted
@@ -1184,7 +1184,7 @@ const CATALOG = [
   {name:"DesktopTrayIconController",area:"Startup & Shell",role:"ctrl",scope:"app",lane:"GUI",desc:"Manages desktop system tray icon visibility, menu actions, and background-node quit behavior."},
   {name:"DesktopWindowBehaviorModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"Persists desktop tray and minimize/close window preferences on a shared Utility SerialQueue."},
   {name:"DesktopIntentModel",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"Receives OS FileOpen and single-instance BIP21 payment links from desktopintent::transport::Service."},
-  {name:"UiPreferences / QrImageProvider",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"App UI preferences persistence and asynchronous QR image provider on shared Utility queues."},
+  {name:"UiPreferencesStore / QRImageProvider",area:"Startup & Shell",role:"model",scope:"app",lane:"Utility (IO)",desc:"App UI preferences persistence (beforeInterrupt drain on Utility) and asynchronous QR image provider on shared Utility queues."},
   {name:"MainWindow.qml / preinit.qml / OnboardingWizard.qml / Shutdown.qml",area:"Startup & Shell",role:"view",scope:"app",lane:"GUI",desc:"Top-level application shell, pre-init onboarding wizard, fatal error popup, and shutdown screen."},
 
   // Node, Peers & Console
@@ -1206,8 +1206,8 @@ const CATALOG = [
   {name:"NodeShell.qml / Peers.qml / PeerDetails.qml / CommandConsole.qml",area:"Node, Peers & Console",role:"view",scope:"page",lane:"GUI",desc:"Node runner shell, peers management view, RPC console view, and debug log viewer."},
 
   // Settings
-  {name:"SettingsModel",area:"Settings",role:"model",scope:"app",lane:"Core + Utility",desc:"App & Core settings facade (beforeInterrupt shutdown participant). Implements SettingsEditorFactoryInterface."},
-  {name:"CoreSettingsModel",area:"Settings",role:"model",scope:"app",lane:"Core + Utility",desc:"Manages staged Core settings previews, validation, and atomic writes to settings.json via OwnedWork."},
+  {name:"SettingsModel",area:"Settings",role:"model",scope:"app",lane:"Priority + Utility",desc:"App & Core settings facade (beforeInterrupt shutdown participant on Priority so a wallet load on Core cannot block quit). Implements SettingsEditorFactoryInterface."},
+  {name:"CoreSettingsModel",area:"Settings",role:"model",scope:"app",lane:"Priority + Utility",desc:"Manages staged Core settings previews, validation, and atomic writes to settings.json via OwnedWork on Priority."},
   {name:"SettingsEditorFactoryInterface",area:"Settings",role:"iface",scope:"app",lane:"GUI",desc:"Abstract factory capability (createSettingsEditor()) returning a SettingsModel-owned SettingsEditorModel*."},
   {name:"SettingsEditorModel",area:"Settings",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained settings editor (proxy, pruning) with isolated draft and retiring-while-saving teardown."},
   {name:"SignerDiscoveryModel",area:"Settings",role:"model",scope:"app",lane:"Utility (Signer) + Core",desc:"Runs external hardware-signer discovery CLIs on isolated UtilityWorker::Signer so slow CLIs never starve cleanup."},
@@ -1252,15 +1252,15 @@ const CATALOG = [
   {name:"AddressReservationModel / AddressListModel",area:"Receive & Requests",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Reserves receive addresses/defaults and projects wallet receive/change address book rows."},
   {name:"PaymentRequestEditorModel",area:"Receive & Requests",role:"model",scope:"page",lane:"Core + Utility",desc:"Self-contained payment-request editor with isolated draft and retiring-while-saving teardown."},
   {name:"ReceiveRequestHistoryModel / ReceiptReconciliationModel / RequestSharingModel",area:"Receive & Requests",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Saved payment requests store, incoming-payment reconciliation, and QR/URI sharing state."},
-  {name:"PaymentRequestViewController / PaymentRequestDeleteController",area:"Receive & Requests",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController subclasses for opening, exporting QR images, and deleting saved payment requests."},
+  {name:"PaymentRequestViewController / PaymentRequestDeleteController",area:"Receive & Requests",role:"ctrl",scope:"page",lane:"GUI",desc:"Page controllers bound to WalletReceiveModel for opening, exporting QR images, and deleting saved payment requests; cancel/reset when hidden or unbound."},
   {name:"ReceiveRequestOperation / RequestImageExportOperation",area:"Receive & Requests",role:"op",scope:"page",lane:"Core / Utility",desc:"Single-use operations for saved request mutations and QR PNG export (FileSaveOperation)."},
   {name:"ReceivePage.qml / AddressList.qml / AddressDetails.qml",area:"Receive & Requests",role:"view",scope:"page",lane:"GUI",desc:"Receive flow, address book list, and address details views."},
 
   // Security & Backup
   {name:"WalletPasswordController",area:"Security & Backup",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController for WalletPasswordSettings.qml managing encrypt and passphrase change operations."},
   {name:"WalletSecurityInterface / WalletSecurityModel / SecurityOperation",area:"Security & Backup",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow security capability contract, backend model, and operation for wallet encryption and passphrase changes."},
-  {name:"WalletBackupController",area:"Security & Backup",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController coordinating wallet backup file selection and BackupPolicyOperation state."},
-  {name:"WalletBackupInterface / WalletBackupModel / BackupPolicyOperation",area:"Security & Backup",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow backup contract, shared-authority destination collision check, and FileSaveOperation surviving page dismissal."},
+  {name:"WalletBackupController",area:"Security & Backup",role:"ctrl",scope:"page",lane:"GUI",desc:"WalletPageController coordinating wallet backup file selection and BackupFileOperation state."},
+  {name:"WalletBackupInterface / WalletBackupModel / BackupFileOperation",area:"Security & Backup",role:"iface",scope:"wallet",lane:"Core + Utility",desc:"Narrow backup contract, shared-authority destination collision check, and FileSaveOperation surviving page dismissal."},
   {name:"SignVerifyMessageModel",area:"Security & Backup",role:"model",scope:"wallet",lane:"Core + Utility",desc:"Signs and verifies Bitcoin messages on Session without holding native handles on GUI."},
   {name:"WalletSettingsHost.qml / WalletSettingsStack.qml / WalletPasswordSettings.qml / SignVerifyMessage.qml",area:"Security & Backup",role:"view",scope:"page",lane:"GUI",desc:"Per-wallet settings host (creates a fresh stack per wallet), password settings, and sign/verify message views."}
 ];
